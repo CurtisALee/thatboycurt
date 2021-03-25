@@ -1,0 +1,77 @@
+extends ../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Laced Case Study | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/laced"
+  -var metaTitle = "Laced Case Study"
+  -var metaDescription = "Laced are determined to bring the European sneaker trading experience into the 21st century, and we're helping them to achieve their vision."
+
+block pageComponents
+
+  .section.section--sm-spacing
+    .container
+
+      +intro({
+        image: {
+          src: "/assets/images/case-studies/laced/logo.svg",
+          alt: "The Laced search results page show on a laptop.",
+        },
+        text: "Laced are determined to bring the European sneaker trading experience into the 21st century, and we're helping them to achieve their vision."
+      })
+
+      +details({
+        details: [
+          {
+            heading: "Themes",
+            text: "Consultancy, design, development"
+          },
+          {
+            heading: "Deliverables",
+            text: "Custom e-commerce platform"
+          },
+          {
+            heading: "Technology",
+            text: "React, Ruby on Rails, API integrations"
+          },
+          {
+            heading: "Platform",
+            text: "Web"
+          }
+        ]
+      })
+
+  .section
+    .container
+      figure
+        img(src="/assets/images/case-studies/laced/image-1.jpg" alt="The Laced product information page shown on laptop and mobile devices.")
+
+      .grid.grid--two-thirds-reverse
+        .grid__item
+          +summary({
+            heading: "What is it?",
+            text: "Laced allows sneaker enthusiasts to buy and sell collectible sneakers online, track market values, and reserve items at certain prices."
+          })
+
+        .grid__item
+          h2 The challenge
+          p Against a backdrop of highly established sneaker trading platforms in the United States, the European market was considerably less developed, with enthusiasts forced onto generalist platforms like eBay and Facebook to trade footwear.
+          p Laced Spotted an opportunity to own the European market, and asked us to help build a minimum viable product (MVP) to compete with their American counterparts.
+
+          h2 Our approach
+
+          h3 Seller-friendly listings
+          p Many of those selling on the platform are professional traders,  who themselves need to routinely list new products for sale. It was essential that Laced catered for the bulk-listing of sneakers, making the platform a viable option for high-volume traders.
+          p When listing a pair of sneakers for sale, the seller can search for the product by name, brand, product code, or style. Multiple products can then be added in a single listing, with the ability to add as many pairs, sizes, and individual prices as is needed.
+
+      figure
+        img(src="/assets/images/case-studies/laced/image-2.jpg" alt="The Laced Website")
+
+      .grid.grid--two-thirds
+        .grid__item
+          h3 Trust-building payment methods
+          p As an entirely new brand, trust and loyalty are of extra importance to Laced. We integrated Stripe and PayPal into the platform, allowing customers to purchase with confidence.
+          p Although predominantly a credit-based platform, users can also add funds to their account with a debit or credit card, allowing them to automatically bid on sneakers within their own pre-defined spend limits.
+          p For those selling on Laced, withdrawals can be made through the site, transferring credit directly out of the platform and into their own bank accounts.
+
+          h2 The outcome
+          p Laced launched at the beginning of 2019, and started attracting both buyers and sellers straight away, with over 1,000 new accounts registered in the 3 months after the platform launched. What's more, we're continuing to work with Laced into 2020, developing the platform further with a series of new features and refinements.

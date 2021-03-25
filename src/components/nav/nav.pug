@@ -1,0 +1,27 @@
+mixin nav(c)
+  nav.nav(class= c.modifier ? "nav--" + c.modifier : "")
+    ul.nav__list
+      each item in c.navList
+        li.nav__item
+          if activePage ===  item.text
+            if item.textMobile
+              span.nav__link.nav__link--active
+                span.nav__text
+                  span.nav__text__mobile= item.textMobile
+                  span.nav__text__standard= item.text
+            else
+              span.nav__link.nav__link--active= item.text
+          else
+            a.nav__link(
+              href= item.url
+              data-micromodal-trigger=(item.triggerModal ? "modal-contact" : undefined)
+              data-mobile-only=(item.mobileOnly ? "mobile-only" : undefined)
+              target=(item.newTab ? "_blank" : undefined)
+              rel=(item.newTab ? "noopener" : undefined)
+            )
+              if item.textMobile
+                span.nav__text
+                  span.nav__text__mobile= item.textMobile
+                  span.nav__text__standard= item.text
+              else
+                span.nav__text= item.text

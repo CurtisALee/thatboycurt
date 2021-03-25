@@ -1,0 +1,17 @@
+extends ../base.pug
+
+block pageContent
+  +header({})
+
+  main.site-content(role="main")
+    block pageComponents
+
+  +banner({
+    preview: true
+  })
+
+  +footer({
+    nav: true
+  })
+
+  +modal

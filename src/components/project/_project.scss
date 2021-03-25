@@ -1,0 +1,22 @@
+$image-height: $size-11;
+
+.project {
+
+  &__subheading {
+    color: $color-white;
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .6rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-4;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: $spacing-4;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-6;
+    }
+  }
+}

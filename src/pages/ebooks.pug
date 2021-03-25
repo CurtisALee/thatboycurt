@@ -1,0 +1,39 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Our eBooks | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/ebooks"
+  -var metaTitle = "Our eBooks"
+  -var metaDescription = "We’re writing eBooks to help you capture better information from your customers, and build happier teams too. Specialist web design & development."
+
+  -var heroHeading = "We give away eBooks"
+  -var heroSubheading = "It's good to be kind to one another, and just like kindness, our eBooks don't cost a penny. We write about building better workspaces, increasing the productivity of your team, and generally working smarter."
+
+block pageComponents
+
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading,
+  })
+
+  section.section
+    .container
+      .grid.grid--tile
+        .grid__item
+          +resource({
+            image: {
+              src: "/assets/images/ebooks/better-digital-teams.jpg",
+              alt: "The 'Working environments' e-book cover."
+            },
+            url: "/resources/articles/Better%20Digital%20Teams%20-%20Working%20environment.pdf",
+            subheading: "Episode one",
+            heading: "Working environments",
+            text: "Learn how to create a productive workspace, getting the most out of your team of developers, designers, or writers."
+          })
+
+        .grid__item
+          +resource({
+            subheading: "Episode two",
+            heading: "Remote working",
+            text: "Discover how to shrink your overheads whilst keeping the team feeling connected and the work qualify high."
+          })

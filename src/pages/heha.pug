@@ -1,0 +1,88 @@
+extends ../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "HEHA! Case Study | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/heha"
+  -var metaTitle = "HEHA! Case Study"
+  -var metaDescription = "We helped Holiday Extras, the UK's market leader for travel extras, build an app for travellers planning and organising trips together."
+
+block pageComponents
+
+  .section.section--sm-spacing
+    .container
+      +intro({
+        image: {
+          src: "/assets/images/case-studies/heha/logo.svg",
+          alt: "HEHA!",
+        },
+        text: "Not content with being the UK's market leader for travel extras, Holiday Extras decided try their hand at helping travellers plan and organise their trips together."
+      })
+
+      +details({
+        details: [
+          {
+            heading: "Themes",
+            text: "Consultancy, product design"
+          },
+          {
+            heading: "Deliverables",
+            text: "Wireframes, prototypes"
+          },
+          {
+            heading: "Technology",
+            text: "React Native, Node, GraphQL"
+          },
+          {
+            heading: "Platform",
+            text: "iOS, Android"
+          }
+        ]
+      })
+
+  .section
+    .container
+      figure
+        img(src="/assets/images/case-studies/heha/image-1.jpg" alt="The HEHA! iOS application on several mobile devices showing how trips, news feeds and travel maps are displayed.")
+
+      .grid.grid--two-thirds-reverse
+        .grid__item
+          +summary({
+            heading: "What is it?",
+            text: "HEHA! is a trip-planning app, allowing travellers to manage everything from booking confirmations, to creating shared, collaborative itineraries."
+          })
+
+        .grid__item
+          h2 The challenge
+          p As an incubated startup, the HEHA! team had a small window of opportunity to get a minimum viable product (MVP) of their travel-planning application to market. We were brought in to help their users create and manage their get-away, capturing everything from destinations and dates to travellers and trip themes.
+
+          h2 Our approach
+
+          p Very early on in the project, we spoke at length with the Holiday Extras Call Centre staff to better understanding the most common travel-related pain-points. Through speaking to thousands of trip-planning customers a day, the Holiday Extras team would undoubtably have spotted recurring themes, and we want this insight to drive our own decision-making.
+
+          h3 Flexible solutions for flexible travellers
+          p Research conducted with various stakeholders showed that there was an incredible variance in how people planned their trips. Many would start planning with just a date or destination in mind, while others didn't mind where or when they went, but knew what type of holiday they wanted.
+
+          p To cater for all types of travellers, we need a trip creation process that allowed the user to:
+
+          ul.styled-list
+            li.styled-list__item Add a single traveller, multiple travellers, or no traveller at all.
+            li.styled-list__item Add a single destination, multiple destinations, or no destination at all.
+            li.styled-list__item Add trip dates (optionally).
+            li.styled-list__item Add the purpose of the trip (optionally).
+            li.styled-list__item Add the type of activities they're interested in (optionally).
+
+          p Each piece of information we gathered would directly impact the suggestions we made to the user. A traveller using HEHA! to plan a hen do, for example, would see a radically different feed of information to someone planning a golf trip.
+
+          p To keep the application both useful and relevant for travellers with flexible requirements, we relied heavily on sensible defaults, offering popular content and recommendations where users hadn't yet figured out the specifics of their trip.
+
+      figure
+        img(src="/assets/images/case-studies/heha/image-2.jpg" alt="The HEHA! iOS application across 3 mobile devices showing how users can be invited, trip details edited, and photos uploaded.")
+
+      .grid.grid--two-thirds
+        .grid__item
+          h3 Custom design patterns for specific needs
+          p To cater for the flexibility travellers needed, the destination lookup was designed from the ground-up. Google's Places API allowed us to automatically suggest locations to the user as they typed, reducing the risk of spelling mistakes, and resulting in a higher-quality of data captured for the HEHA! team.
+
+          h2 The outcome
+          p HEHA! launched in both the App Store and Google Play Store in the summer of 2017, and has found favour with an increasing number of active users and trip creators.
+          p We're continuing to work with the HEHA! team, refining the application and making trip planning not only more collaborative, but more fun.

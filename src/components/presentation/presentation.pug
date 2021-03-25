@@ -1,0 +1,23 @@
+mixin presentation(c)
+  .presentation(class= c.modifier ? "presentation--" + c.modifier : "")
+    .presentation__content
+      if c.project
+        +project({
+          subheading: c.project.subheading,
+          heading: c.project.heading,
+          text: c.project.text,
+          button: {
+            modifier: c.project.button.modifier,
+            text: c.project.button.text,
+            url: c.project.button.url,
+            triggerModal: c.project.button.triggerModal,
+          }
+        })
+      else if c.blockList
+        +block-list(c.blockList)
+    +image({
+      context: "presentation",
+      modifier: c.modifier,
+      src: c.image.src,
+      alt: c.image.alt
+    })

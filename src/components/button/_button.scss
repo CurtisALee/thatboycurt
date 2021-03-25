@@ -1,0 +1,52 @@
+.button {
+  @include focus-ring;
+  background-color: $color-eggplant;
+  border: none;
+  border-radius: $border-radius-base;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .8rem;
+  font-family: $font-family-sans-serif-medium;
+  padding: $spacing-4 $spacing-5;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $duration-2 $timing-ease;
+
+  // Gnarly hack to force visual text alignment within a button.
+  &::before {
+    content: '';
+    display: block;
+    margin-top: $spacing-1;
+  }
+
+  &:hover {
+    background-color: darken($color-eggplant, 3%);
+    text-decoration: none;
+  }
+
+  &--small {
+    font-size: $font-size-xs;
+    padding: $spacing-3 $spacing-5;
+  }
+
+  &--large {
+    background-color: $color-white;
+    color: $color-bluegem;
+    display: block;
+    font-size: $root-font-size;
+    font-weight: bold;
+    letter-spacing: .01rem;
+    padding: $spacing-5 $spacing-6;
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      display: inline-block;
+      width: auto;
+    }
+
+    &:hover {
+      background-color: $color-silk;
+    }
+  }
+}

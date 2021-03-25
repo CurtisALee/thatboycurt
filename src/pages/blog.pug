@@ -1,0 +1,22 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var activePage = "Blog"
+  -var pageTitle = "Our Blog | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/blog"
+  -var metaTitle = "Our Blog"
+  -var metaDescription = "Our thoughts, advice, and general musings around a collection of themes, including data capture, productivity, and remote working. Specialist web design & development."
+
+  -var heroHeading = "We like to write"
+  -var heroSubheading = "It's no good accruing knowledge if you keep it to yourself. We write about a range of themes, including how to gather information effectively, working productively and remotely, and even the occasional company update."
+
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading
+  })
+
+  section.section
+    .container
+      +blog-post-grid(false)

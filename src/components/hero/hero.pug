@@ -1,0 +1,25 @@
+mixin hero(c)
+  section.hero
+    .hero__container
+      if c.introImage === true
+        .hero__content
+          h1.hero__heading(class= c.headingModifier ? "hero__heading--" + c.headingModifier : "") !{c.heading}#[span.hero__heading__period .]
+          p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
+          +image({
+            context: "hero",
+            modifier: c.imageModifier,
+            src: c.image.src,
+            alt: c.image.alt
+          })
+      else if c.introButton === true
+        .hero__content
+          h1.hero__heading !{c.heading}#[span.hero__heading__period .]
+          p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
+          +button(c.button)
+      else
+        .hero__content
+          h1.hero__heading(class= c.headingModifier ? "hero__heading--" + c.headingModifier : "")  !{c.heading}#[span.hero__heading__period .]
+          if c.subheading
+            p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
+          else
+            p.hero__subheading A #[strong #{c.minutesToRead} minute read], written by #[strong #{c.author}] on #[strong #{c.date}].

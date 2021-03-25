@@ -1,0 +1,11 @@
+.summary {
+
+  &__heading {
+    font-size: $font-size-xs;
+  }
+
+  &__text {
+    font-size: $root-font-size-xl;
+    margin: 0;
+  }
+}

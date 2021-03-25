@@ -1,0 +1,154 @@
+html {
+  position: relative;
+}
+
+main {
+  overflow: hidden;
+
+  .page--content & {
+    overflow: visible;
+  }
+}
+
+.container {
+  @include container;
+  position: relative;
+}
+
+.section {
+  margin-bottom: $spacing-9;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    margin-bottom: $spacing-10;
+
+    .page--company &:not(:last-child) {
+      margin-bottom: $spacing-13;
+    }
+  }
+
+  &--sm-spacing {
+    margin-bottom: $spacing-7;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-9;
+    }
+  }
+
+  &--lg-spacing {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-11;
+    }
+  }
+}
+
+// Company page layouts
+
+.company {
+  margin: auto;
+  max-width: 40rem;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    max-width: unset;
+  }
+
+  &__map {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      position: relative;
+      z-index: z('below');
+    }
+  }
+
+  &__explanation {
+    position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      left: $spacing-7;
+    }
+
+    .explanation {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-top: 10%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+// Company page images
+
+.company-map {
+
+  &__media {
+
+    &--mobile-map {
+      display: block;
+      margin-right: -$spacing-13;
+      margin-top: -$spacing-11;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-right: 0;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--desktop-map {
+      display: none;
+      margin-top: 0;
+      position: absolute;
+      transform: translateY(-50%);
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        display: block;
+        left: -$spacing-7;
+        width: 118rem;
+      }
+    }
+
+    &--desktop-map-secondary {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        left: -$spacing-10;
+        margin-top: 0;
+        position: absolute;
+        transform: translateY(-50%);
+        width: 55rem;
+      }
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        display: none;
+      }
+    }
+  }
+}
+
+.team {
+
+  &__bench-profiles {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      display: grid;
+      grid-gap: $spacing-2;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+    }
+  }
+}
+
+.analysis {
+  &__media {
+    transform: scale(1.17);
+  }
+}

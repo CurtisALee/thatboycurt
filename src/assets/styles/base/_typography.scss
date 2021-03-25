@@ -1,0 +1,292 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color-heading);
+  font-weight: $font-weight-heading;
+  line-height: $heading-line-height;
+  margin-top: 0;
+}
+
+h1, .h1 {
+  font-size: $font-size-h1;
+  margin-bottom: $spacing-4;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    font-size: 4rem;
+    margin-bottom: $spacing-4;
+  }
+}
+
+h2, .h2 {
+  font-size: $font-size-h2;
+  margin-bottom: $spacing-4;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    font-size: 1.6rem;
+  }
+
+  .section--longform & {
+    margin-bottom: $spacing-6;
+  }
+}
+
+h3, .h3 {
+  font-size: $font-size-h3;
+  margin-bottom: $spacing-2;
+}
+
+h4, .h4 {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing-3;
+
+  &:not(:first-child) {
+    margin-top: $spacing-7;
+  }
+}
+
+h5, .h5 {
+  font-size: $font-size-h5;
+  margin-bottom: $spacing-3;
+
+  &:not(:first-child) {
+    margin-top: $spacing-7;
+  }
+}
+
+h6, .h6 {
+  margin-bottom: 0;
+}
+
+p {
+  color: $paragraph-color;
+  font-size: $font-size-sm;
+  margin: 0 0 $spacing-7;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  @include hover {
+    text-decoration: line-through;
+  }
+}
+
+
+figure {
+  margin: 0;
+
+  .page--content & {
+    margin-bottom: $spacing-7;
+  }
+}
+
+.permalink + figure {
+  margin-top: $spacing-4;
+}
+
+.figure--wide {
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @include margin-horizontal (-$spacing-9);
+  }
+}
+
+ul {
+  list-style: square;
+}
+
+figcaption {
+  color: var(--color-paragraph);
+  font-size: $font-size-xs;
+  margin-top: $spacing-3;
+  text-align: center;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.divider {
+  border: 0;
+  border-top: $border-style $border-width-xl var(--color-accent);
+  margin: $spacing-8 0;
+  width: $size-6;
+}
+
+.unstyled-list,
+%unstyled-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.styled-list {
+  list-style: none;
+  margin: 0 0 $spacing-7;
+  padding: 0;
+
+  .sidebar & {
+    margin-bottom: 0; //- Debt here! A quick way to get rid of an accidental margin.
+  }
+
+  &__item {
+    font-size: $font-size-sm;
+    padding-left: #{$spacing-4 + .3rem};
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-2;
+    }
+
+    .blog-post & {
+      font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
+      padding-left: #{$spacing-7 + .4rem};
+    }
+
+    &::before {
+      background-color: var(--color-accent);
+      content: '';
+      display: block;
+      height: .3rem;
+      left: 0;
+      position: absolute;
+      top: .3rem;
+      width: .3rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        top: .5rem;
+      }
+
+      .blog-post & {
+        height: .4rem;
+        left: $spacing-5;
+        width: .4rem;
+      }
+    }
+  }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: $color-white;
+  text-shadow: none;
+}
+
+.blog-content {
+  position: relative;
+
+  &__heading {
+    color: var(--color-blog-heading);
+    font-size: 3rem; // Custom font-size, unrelated to global spacing system
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: -1rem; // Custom margin, unrelated to global spacing system
+    pointer-events: none;
+    text-align: center;
+    z-index: z('below');
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      font-size: 5rem; // Custom font-size, unrelated to global spacing system
+      margin-bottom: -2rem; // Custom margin, unrelated to global spacing system
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 7rem; // Custom font-size, unrelated to global spacing system
+      margin-bottom: -3.5rem; // Custom margin, unrelated to global spacing system
+    }
+  }
+}
+
+blockquote.blog-blockquote {
+  margin: $spacing-7 auto;
+  padding: $spacing-3 0 $spacing-3 $spacing-7;
+  position: relative;
+  width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    margin: 0;
+    padding: $spacing-4 0 $spacing-7 $spacing-5;
+    width: 75%;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    width: 100%;
+  }
+
+  p.main-blockquote {
+    color: $color-eggplant;
+  }
+
+  p {
+    color: $color-amethyst;
+    display: block;
+    font-family: $font-family-serif;
+    font-size: $font-size-lg;
+    font-style: italic;
+    line-height: $quote-line-height;
+    margin-bottom: $spacing-3;
+    width: 100%;
+
+    &::before {
+      color: rgba($color-amethyst, .1);
+      content: open-quote;
+      font-family: $font-family-sans-serif;
+      font-size: 10rem;
+      font-weight: 700;
+      line-height: .9;
+      left: -$spacing-4;
+      position: absolute;
+      top: $spacing-4;
+      z-index: z('below');
+    }
+
+    &::after {
+      content: close-quote;
+      visibility: hidden;
+    }
+  }
+
+  cite {
+    color: $color-amethyst;
+    font-size: $font-size-xs;
+
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+.large {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-6;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-bottom: $spacing-8;
+  }
+
+  &--center {
+    margin-bottom: $spacing-8;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      text-align: center;
+    }
+  }
+}
+
+.biography {
+
+  &__meta {
+    color: hsl(231, 84%, 83%);
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    margin-bottom: $spacing-2;
+    text-transform: uppercase;
+  }
+}

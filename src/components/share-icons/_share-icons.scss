@@ -1,0 +1,74 @@
+.share {
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin-top: -5rem; //- Nasty, nasty quick fix to make the layout work. Needs to be refactored.
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-top: 0;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: $spacing-5;
+  }
+
+  &__item {
+    @include margin-horizontal($spacing-2);
+    display: inline-block;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-5;
+    }
+
+    .share--inline & {
+      display: inline-block;
+      margin: 0 $spacing-7 0 0;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    transition: transform $duration-1 $timing-ease;
+
+    @include hover {
+      transform: scale(1.05);
+    }
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__fill {
+    transition: fill $duration-2 $timing-ease-in-out;
+
+    .share__link:hover & {
+      fill: darken($color-white, 5%);
+    }
+  }
+}
+
+.section {
+  &--margin {
+    margin-bottom: $spacing-6;
+    margin-top: $spacing-8;
+  }
+}
+@media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+  .section {
+    &--margin {
+      margin-bottom: $spacing-7;
+    }
+  }
+}

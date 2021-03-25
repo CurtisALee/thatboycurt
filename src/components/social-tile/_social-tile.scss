@@ -1,0 +1,96 @@
+$icon-size: 2.7rem;
+$image-size: $size-1;
+
+.social-tile {
+  @include focus-ring;
+  @include touch-boost;
+  display: block;
+  margin-right: $spacing-5;
+
+  @include hover {
+    text-decoration: none;
+
+    .social-tile__icon {
+      transform: scale(1.1);
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    align-items: center;
+    display: flex;
+
+    &:not(:last-of-type) {
+      margin-right: $spacing-5;
+    }
+  }
+
+  &--bio {
+    margin: 0 $spacing-5 0 0;
+    padding-left: 0;
+
+    &:not(:last-of-type) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin-right: $spacing-3;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        margin-right: $spacing-7;
+      }
+    }
+  }
+
+  &__icon {
+    background-color: var(--color-container);
+    border-radius: $border-radius-full;
+    min-height: $icon-size;
+    min-width: $icon-size;
+    position: relative;
+    text-align: center;
+    transition: transform $duration-2 $timing-ease;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin-right: $spacing-4;
+    }
+  }
+
+  &__image {
+    height: $image-size;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__content {
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      display: block;
+      padding-top: .2rem;
+    }
+  }
+
+  &__heading,
+  &__handle {
+    display: block;
+  }
+
+  &__heading {
+    color: $color-white;
+    font-size: .6rem;
+    font-family: $font-family-sans-serif-extrabold;
+    letter-spacing: .05rem;
+    margin-bottom: -.25rem;
+    text-transform: uppercase;
+  }
+
+  &__handle {
+    color: hsl(231, 84%, 83%);
+    font-family: $font-family-sans-serif-medium;
+    font-size: .6rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
+      font-size: .7rem;
+    }
+  }
+}

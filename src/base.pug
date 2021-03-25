@@ -1,0 +1,81 @@
+include components/mixins.pug
+
+block vars
+
+doctype html
+html.no-js(lang="en-GB")
+  head
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TG99MGS');
+
+
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+
+    if pageTitle
+      title= pageTitle
+    else
+      title="Data Capture Experts | Web, iOS, & Android Developers | Leaf"
+
+    if metaDescription
+      meta(name="description", content=metaDescription)
+    else
+      meta(name="description", content="We help organisations excel online by making it easy for their users to provide them with high quality information. Specialist web design & development.")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    link(rel="apple-touch-icon", sizes="57x57", href="/assets/images/favicons/apple-icon-57x57.png")
+    link(rel="apple-touch-icon", sizes="60x60", href="/assets/images/favicons/apple-icon-60x60.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/assets/images/favicons/apple-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="76x76", href="/assets/images/favicons/apple-icon-76x76.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/assets/images/favicons/apple-icon-114x114.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="/assets/images/favicons/apple-icon-120x120.png")
+    link(rel="apple-touch-icon", sizes="144x144", href="/assets/images/favicons/apple-icon-144x144.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="/assets/images/favicons/apple-icon-152x152.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/assets/images/favicons/apple-icon-180x180.png")
+    link(rel="icon" type="image/png", sizes="192x192",  href="/assets/images/favicons/android-icon-192x192.png")
+    link(rel="icon" type="image/png", sizes="32x32", href="/assets/images/favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png", sizes="96x96", href="/assets/images/favicons/favicon-96x96.png")
+    link(rel="icon" type="image/png", sizes="16x16", href="/assets/images/favicons/favicon-16x16.png")
+    link(rel="manifest", href="/assets/images/favicons/manifest.json")
+    link(rel="preconnect" href="https://www.googletagmanager.com")
+    meta(name="msapplication-TileColor", content="#dbffe7")
+    meta(name="msapplication-TileImage", content="/assets/images/favicons/ms-icon-144x144.png")
+    meta(name="theme-color", content="#3d18c3")
+
+    if metaUrl
+      meta(property="og:url" content=metaUrl)
+      link(rel="canonical" href=metaUrl)
+    if metaTitle
+      meta(property="og:title" content=metaTitle)
+      meta(name="twitter:title" content=metaTitle)
+    if metaDescription
+      meta(property="og:description" content=metaDescription)
+      meta(name="twitter:description" content=metaDescription)
+    meta(name="twitter:card" content="summary_large_image")
+    if metaImage
+      meta(name="twitter:image" content=metaImage)
+      meta(property="og:image" content=metaImage)
+    else
+      meta(name="twitter:image" content="https://weareleaf.com/assets/images/meta-image.jpg")
+      meta(property="og:image" content="https://weareleaf.com/assets/images/meta-image.jpg")
+
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:site" content="@we_are_leaf")
+    meta(name="twitter:creator" content="@we_are_leaf")
+    link(rel="stylesheet", href="/assets/styles/main.css")
+
+    if playfairDisplay
+      link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet")
+
+  body.transition-in
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-TG99MGS' height='0' width='0' style='display:none;visibility:hidden')
+    div#barba-wrapper
+      .barba-container
+        .page(class= pageClass ? "page--" + pageClass : "")
+          block pageContent

@@ -1,0 +1,47 @@
+.social {
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 $spacing-7 0 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-5;
+    }
+  }
+
+  &__link {
+    @include focus-bg;
+    @include touch-boost;
+    display: block;
+    transition: transform $duration-2 $timing-ease;
+
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    display: inline-block;
+    height: 1.2rem;
+    vertical-align: middle;
+    width: 1.2rem;
+  }
+
+  &__fill {
+    transition: fill $duration-2 $timing-ease-in-out;
+
+    .social__link:hover & {
+      fill: darken($color-white, 5%);
+    }
+  }
+}
