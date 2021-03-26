@@ -15,7 +15,7 @@
 
   &__heading {
     font-size: 2rem;
-    left: .2rem;
+    left: 0.2rem;
     line-height: $heading-line-height;
     margin: 0 0 $spacing-4;
     position: relative;
@@ -91,10 +91,9 @@
 
   &__subheading {
     color: var(--color-footer-text);
-    font-family: $font-family-sans-serif-extrabold;
-    font-size: .6rem;
+    font-size: 0.6rem;
     font-weight: 400;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     margin: 0;
     text-transform: uppercase;
   }
@@ -111,22 +110,20 @@
   }
 
   &__social {
-    margin-top: .4rem;
+    margin-top: 0.4rem;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      margin-top: .2rem;
+      margin-top: 0.2rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: .4rem;
+      margin-top: 0.4rem;
     }
   }
 
   &__info {
     @include clearfix;
     border-top: $border-width-base $border-style var(--color-footer-divider);
-    color: var(--color-footer-text);
-    font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
     margin-top: $spacing-8;
     padding: $spacing-3 0 $spacing-6;

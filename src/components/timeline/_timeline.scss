@@ -29,9 +29,9 @@ $timeline-item-offset: 1.9rem;
 
     &::before {
       background-color: var(--color-accent);
-      border: solid .4rem var(--color-background);
+      border: solid 0.4rem var(--color-background);
       border-radius: 100%;
-      box-shadow: 0 0 0 .1rem white;
+      box-shadow: 0 0 0 0.1rem white;
       content: '';
       height: 1.5rem;
       left: 0;
@@ -50,7 +50,7 @@ $timeline-item-offset: 1.9rem;
       background: hsl(226, 64%, 94%);
       content: '';
       height: 100%;
-      left: .7rem;
+      left: 0.7rem;
       position: absolute;
       top: $timeline-item-offset;
       width: $border-width-sm;
@@ -76,7 +76,6 @@ $timeline-item-offset: 1.9rem;
     color: hsl(249, 48%, 92%);
     cursor: pointer;
     display: block;
-    font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
     padding: $spacing-5;
     width: 100%;

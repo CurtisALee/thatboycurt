@@ -66,7 +66,7 @@ $image-size: $size-1;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       display: block;
-      padding-top: .2rem;
+      padding-top: 0.2rem;
     }
   }
 
@@ -77,20 +77,18 @@ $image-size: $size-1;
 
   &__heading {
     color: $color-white;
-    font-size: .6rem;
-    font-family: $font-family-sans-serif-extrabold;
-    letter-spacing: .05rem;
-    margin-bottom: -.25rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: -0.25rem;
     text-transform: uppercase;
   }
 
   &__handle {
     color: hsl(231, 84%, 83%);
-    font-family: $font-family-sans-serif-medium;
-    font-size: .6rem;
+    font-size: 0.6rem;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
   }
 }

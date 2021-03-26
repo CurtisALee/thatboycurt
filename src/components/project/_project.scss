@@ -1,13 +1,11 @@
 $image-height: $size-11;
 
 .project {
-
   &__subheading {
     color: $color-white;
-    font-family: $font-family-sans-serif-extrabold;
-    font-size: .6rem;
+    font-size: 0.6rem;
     font-weight: 400;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     margin-bottom: $spacing-4;
     text-transform: uppercase;
   }

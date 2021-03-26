@@ -1,5 +1,4 @@
 .profile {
-
   &--small {
     align-items: center;
     display: flex;
@@ -16,8 +15,7 @@
 
   &__image {
     border-radius: $border-radius-lg;
-    transition:
-      box-shadow $duration-6 $timing-ease,
+    transition: box-shadow $duration-6 $timing-ease,
       transform $duration-2 $timing-ease;
 
     &--small {
@@ -27,11 +25,11 @@
 
   &__block {
     @include aspect-ratio;
-    background: $color-bluegem url('../../assets/images/company/question.svg') no-repeat center center;
+    background: $color-bluegem url('../../assets/images/company/question.svg')
+      no-repeat center center;
     border-radius: $border-radius-lg;
     margin-bottom: $spacing-4;
-    transition:
-      box-shadow $duration-6 $timing-ease,
+    transition: box-shadow $duration-6 $timing-ease,
       transform $duration-2 $timing-ease;
   }
 
@@ -51,7 +49,6 @@
 
   &__text {
     color: var(--color-paragraph);
-    font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
     margin-bottom: 0;
 
@@ -68,18 +65,16 @@
 }
 
 a.profile {
-
   &:hover {
     cursor: pointer;
     text-decoration: none;
 
     .profile__block,
     .profile__image {
-      box-shadow: 0 .5rem 1rem 0 rgba($color-black, .015);
+      box-shadow: 0 0.5rem 1rem 0 rgba($color-black, 0.015);
       transform: scale(1.02);
 
       &--small {
-
         &:hover {
           box-shadow: none !important; // Prevent higher specificity `__image` from working
           transform: scale(1) !important;

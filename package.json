@@ -1,7 +1,7 @@
 {
-  "name": "leaf",
-  "version": "1.1.0",
-  "description": "The Leaf Website",
+  "name": "thatboycurt",
+  "version": "1.0.0",
+  "description": "Personal site templated from Leaf Software (Pre Docker integration)",
   "private": true,
   "scripts": {
     "build:jpgs": "node ./scripts/png-convert.js",

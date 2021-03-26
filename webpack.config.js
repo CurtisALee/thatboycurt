@@ -17,14 +17,12 @@ const pagePlugins = pages.map(page => {
 })
 
 const filePlugins = new CopyPlugin([
-  { from: './src/assets/fonts/', to: './assets/fonts' },
   { from: './src/assets/images/', to: './assets/images/' },
-  { from: './src/resources/', to: './resources/' },
   { from: './src/robots.txt', to: './robots.txt' }
 ])
 
 const sitemapPlugin = new SitemapPlugin(
-  'https://weareleaf.com',
+  'https://thatboycurt.com',
   generateSitemapConfig(), {
     filename: 'sitemap.xml'
   }

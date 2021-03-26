@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /404
-Disallow: /404.html
 
-Sitemap: https://weareleaf.com/sitemap.xml
+Sitemap: https://thatboycurt.com/sitemap.xml
