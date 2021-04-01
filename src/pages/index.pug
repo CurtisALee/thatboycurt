@@ -1,56 +1,29 @@
 extends ../layouts/page.pug
 
 block prepend vars
-  -var metaUrl = "https://weareleaf.com"
-  -var heroHeading = "I'm a big heading"
-  -var heroSubheading = "More than any other period in time, people want to serve themselves, and on their own terms. We help organisations excel online by making it easy for their users to provide them with high quality information."
+  -var metaUrl = "https://thatboycurt.com"
+  -var heroHeading = "Hey there, I’m Curt 👋"
+  -var heroSubheading = "Currently designing products at nuom"
 
 block pageComponents
   +hero({
     heading: heroHeading,
     subheading: heroSubheading,
+    introButton: true,
+    button: {
+      url: "#",
+      text: "More about me"
+    }
   })
 
   section.section
     .container
-      +presentation({
-        project: {
-          subheading: "MyRIFT",
-          heading: "Helping Brits claim back tax",
-          text: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers.",
-          button: {
-            url: "/rift",
-            text: "See the case study"
-          }
-        },
-        image: {
-          src: "/assets/images/case-studies/rift/presentation.jpg",
-          alt: "RIFT's MyRIFT Web application, showing customer provided tax refund information on tablet and mobile devices."
-        },
-        modifier: "reverse"
-      })
+      +content-block(
+        "Where have I worked?",
+        "I’ve had the pleasure of working with and learning from some great teams, most notably at Kind, Strafe Creative, Leaf Software and nuom.",
+        "As well as gaining valuable industry experience both during university, and after, I’ve also taught classes on SkillShare that focus on prototyping and interactive design for mobile applications."
+      )
 
-      +presentation({
-        project: {
-          subheading: "Heha!",
-          heading: "Hassle-free travel",
-          text: "Planning trips is tough. We worked with Holiday Extras to create HEHA!, an iOS and Android app to simplify the task.",
-          button: {
-            url: "/heha",
-            text: "See the case study"
-          }
-        },
-        image: {
-          src: "/assets/images/case-studies/heha/presentation.jpg",
-          alt: "Holiday Extras' HEHA! Mobile app, showing several planned trips on some mobile devices."
-        },
-        modifier: "90"
-      })
-
-
-  section.section.section--sm-spacing
-    .container
-      +company-logos
 
   section.section.section--lg-spacing
     .container
