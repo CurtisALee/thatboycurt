@@ -18,11 +18,32 @@ block pageComponents
 
   section.section
     .container
-      +content-block(
-        "Where have I worked?",
-        "I’ve had the pleasure of working with and learning from some great teams, most notably at Kind, Strafe Creative, Leaf Software and nuom.",
-        "As well as gaining valuable industry experience both during university, and after, I’ve also taught classes on SkillShare that focus on prototyping and interactive design for mobile applications."
-      )
+      .grid.grid--employment-overview
+        .grid__item
+          +content-block({
+            heading: "Where have I worked?",
+            intro: "I’ve had the pleasure of working with and learning from some great teams, most notably at Kind, Strafe Creative, Leaf Software and nuom.",
+            paragraphs: [
+              {
+                text: "As well as gaining valuable industry experience both during university, and after, I’ve also taught classes on SkillShare that focus on prototyping and interactive design for mobile applications."
+              }
+            ],
+            blockButton: true,
+            button: {
+              url: "#",
+              text: "Check out my LinkedIn"
+            }
+          })
+        .grid__item
+          +employment({
+            image: {
+              src: "/assets/images/employments/nuom.jpg",
+              alt: "Alt text here"
+            },
+            title: "Title",
+            details: "Details",
+            location: "Location"
+          })
 
 
   section.section.section--lg-spacing

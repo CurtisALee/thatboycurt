@@ -1,6 +1,8 @@
-mixin content-block(heading, intro, text)
-  .content
-    h2.content-block__heading= heading
-    p.content-block__intro= intro
-    p.content-block__text= text
-
+mixin content-block(c)
+  .content-block
+    h2.content-block__heading= c.heading
+    p.content-block__intro= c.intro
+    each item in c.paragraphs
+      p.content-block__text= item.text
+    if c.blockButton === true
+      +button(c.button)

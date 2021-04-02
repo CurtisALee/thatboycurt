@@ -1,0 +1,12 @@
+mixin employment(c)
+  .employment
+    .employment__image
+      +image({
+        context: "employment",
+        src: c.image.src,
+        alt: c.image.alt
+      })
+    .employment__content
+      h3.employment__title= c.title
+      p.employment__details= c.details
+      p.employment__location= c.location

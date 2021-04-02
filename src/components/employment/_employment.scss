@@ -1,0 +1,23 @@
+.employment {
+  display: flex;
+
+  &__image {
+    position: relative;
+  }
+
+  // Really rough styling just to get the component working
+
+  &__media {
+    &::after {
+      background-color: red;
+      box-shadow: 0 0 0 0.1rem white;
+      content: '';
+      height: 1.5rem;
+      left: 50%;
+      bottom: 2rem;
+      position: absolute;
+      width: 0.2rem;
+      transform: translateX(-50%);
+    }
+  }
+}
