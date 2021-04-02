@@ -1,0 +1,5 @@
+mixin employment-list(c)
+  ul.employment-list__items
+    each item in c.employmentList
+      li.employment-list__item
+        +employment(item)

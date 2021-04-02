@@ -1,6 +1,6 @@
 mixin employment(c)
   .employment
-    .employment__image
+    .employment__thumbnail(class= c.modifier ? "employment__thumbnail--" + c.modifier : "")
       +image({
         context: "employment",
         src: c.image.src,

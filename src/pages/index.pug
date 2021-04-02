@@ -35,14 +35,55 @@ block pageComponents
             }
           })
         .grid__item
-          +employment({
-            image: {
-              src: "/assets/images/employments/nuom.jpg",
-              alt: "Alt text here"
-            },
-            title: "Title",
-            details: "Details",
-            location: "Location"
+          +employment-list({
+            employmentList: [
+              {
+                image: {
+                  src: "/assets/images/employments/nuom.jpg",
+                  alt: "Alt text here"
+                },
+                title: "Title",
+                details: "Details",
+                location: "Location"
+              },
+              {
+                image: {
+                  src: "/assets/images/employments/leaf.jpg",
+                  alt: "Alt text here"
+                },
+                title: "Title",
+                details: "Details",
+                location: "Location"
+              },
+              {
+                image: {
+                  src: "/assets/images/employments/skillshare.jpg",
+                  alt: "Alt text here"
+                },
+                title: "Title",
+                details: "Details",
+                location: "Location"
+              },
+              {
+                image: {
+                  src: "/assets/images/employments/strafe.jpg",
+                  alt: "Alt text here"
+                },
+                title: "Title",
+                details: "Details",
+                location: "Location"
+              },
+              {
+                image: {
+                  src: "/assets/images/employments/kind.jpg",
+                  alt: "Alt text here"
+                },
+                title: "Title",
+                details: "Details",
+                location: "Location",
+                modifier: "last"
+              }
+            ]
           })
 
 

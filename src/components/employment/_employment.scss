@@ -1,23 +1,25 @@
 .employment {
   display: flex;
+  margin-bottom: 3rem;
 
-  &__image {
+  &__thumbnail {
     position: relative;
-  }
 
-  // Really rough styling just to get the component working
-
-  &__media {
     &::after {
       background-color: red;
-      box-shadow: 0 0 0 0.1rem white;
       content: '';
-      height: 1.5rem;
+      height: calc(100% - 3rem);
       left: 50%;
-      bottom: 2rem;
+      margin-top: 2rem;
       position: absolute;
       width: 0.2rem;
       transform: translateX(-50%);
+    }
+
+    &--last {
+      &::after {
+        content: none;
+      }
     }
   }
 }
