@@ -1,4 +1,8 @@
-.content {
+.content-block {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
   &__heading-2 {
     color: var(--color-heading-2);
     font-size: $font-size-h2;

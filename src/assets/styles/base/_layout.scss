@@ -2,14 +2,6 @@ html {
   position: relative;
 }
 
-main {
-  overflow: hidden;
-
-  .page--content & {
-    overflow: visible;
-  }
-}
-
 .container {
   @include container;
   position: relative;
@@ -35,7 +27,6 @@ main {
   }
 
   &--lg-spacing {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: $spacing-11;
     }
@@ -71,7 +62,6 @@ main {
     }
 
     .explanation {
-
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         margin-top: 10%;
         position: absolute;
@@ -83,9 +73,7 @@ main {
 // Company page images
 
 .company-map {
-
   &__media {
-
     &--mobile-map {
       display: block;
       margin-right: -$spacing-13;
@@ -105,7 +93,7 @@ main {
       margin-top: 0;
       position: absolute;
       transform: translateY(-50%);
-  
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         display: block;
         left: -$spacing-7;
@@ -124,7 +112,7 @@ main {
         transform: translateY(-50%);
         width: 55rem;
       }
-  
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         display: none;
       }
@@ -133,7 +121,6 @@ main {
 }
 
 .team {
-
   &__bench-profiles {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: grid;

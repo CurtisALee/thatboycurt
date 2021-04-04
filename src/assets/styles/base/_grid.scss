@@ -120,14 +120,10 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
 
   &--blog {
     grid-template-columns: 1fr;
+    grid-gap: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      grid-gap: $spacing-7;
       grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 

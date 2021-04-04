@@ -1,7 +1,7 @@
 const glob = require('glob')
 const ImageMagick = require('imagemagick')
 
-const BACKGROUND_COLOR = '#3d18c3'
+const BACKGROUND_COLOR = '#ffffff'
 const QUALITY = 80
 const FILES = __dirname + '/../src/assets/**/*.png'
 
