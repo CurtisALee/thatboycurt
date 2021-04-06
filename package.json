@@ -4,7 +4,6 @@
   "description": "Personal site templated from Leaf Software (Pre Docker integration)",
   "private": true,
   "scripts": {
-    "build:jpgs": "node ./scripts/png-convert.js",
     "build:assets": "webpack --mode=production",
     "watch:assets": "webpack-dev-server --mode=development",
     "git:gh-pages": "gh-pages -d dist",

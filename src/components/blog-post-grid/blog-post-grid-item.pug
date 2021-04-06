@@ -2,10 +2,11 @@ mixin blog-post-grid-item(c)
   .grid__item
     a.post(href=c.href)
       .post__content
-        span.post__date Published #{c.date}
+        span.post__date Published in #{c.date}
         h3.post__heading= c.heading
         p.post__text= c.text
-        +tag(c.label)
+        .post__tag
+          span.post__label= c.label
       if c.redirect === true
         +image({
           context: "post",

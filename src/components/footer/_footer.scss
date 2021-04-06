@@ -148,7 +148,7 @@
   }
 
   &__copyright,
-  &__vat {
+  &__meta {
     align-self: center;
     color: inherit;
     font-size: 1em;
@@ -179,7 +179,7 @@
     @include margin-horizontal(auto);
   }
 
-  &__vat {
+  &__meta {
     float: right;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
