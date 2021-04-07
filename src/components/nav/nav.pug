@@ -14,7 +14,6 @@ mixin nav(c)
           else
             a.nav__link(
               href= item.url
-              data-micromodal-trigger=(item.triggerModal ? "modal-contact" : undefined)
               data-mobile-only=(item.mobileOnly ? "mobile-only" : undefined)
               target=(item.newTab ? "_blank" : undefined)
               rel=(item.newTab ? "noopener" : undefined)

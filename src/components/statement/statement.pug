@@ -8,5 +8,4 @@ mixin statement(c)
       p.statement__text= c.text
       if c.link
         a.statement__link(
-          data-micromodal-trigger=(c.link.triggerModal ? "modal-contact" : undefined)
           href= c.link.href)= c.link.text
