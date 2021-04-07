@@ -1,6 +1,6 @@
 # The site
 
-The main build and configuration for this site was bootstrapped from the old [Leaf website][leaf], prior to the Docker integration. I've simply taken the foundation of the original codebase, hooked it up Netlify, and stripped the files back in order to add my own components and sprinkle of CSS.
+The main build and configuration for this site was bootstrapped from the old [Leaf website][leaf], prior to the Docker integration. I've simply taken the foundation of the original codebase, hooked it up to Netlify, and stripped the files back in order to add my own components and sprinkle of CSS.
 
 [leaf]: https://weareleaf.com/
 
