@@ -4,13 +4,8 @@ mixin nav(c)
       each item in c.navList
         li.nav__item
           if activePage ===  item.text
-            if item.textMobile
-              span.nav__link.nav__link--active
-                span.nav__text
-                  span.nav__text__mobile= item.textMobile
-                  span.nav__text__standard= item.text
-            else
-              span.nav__link.nav__link--active= item.text
+            span.nav__link.nav__link--active
+              span.nav__text= item.text
           else
             a.nav__link(
               href= item.url
@@ -18,9 +13,4 @@ mixin nav(c)
               target=(item.newTab ? "_blank" : undefined)
               rel=(item.newTab ? "noopener" : undefined)
             )
-              if item.textMobile
-                span.nav__text
-                  span.nav__text__mobile= item.textMobile
-                  span.nav__text__standard= item.text
-              else
-                span.nav__text= item.text
+              span.nav__text= item.text

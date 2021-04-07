@@ -1,19 +1,13 @@
 .header {
-  //background-color: var(--color-header);
-  //background-color: var(--color-header-background);
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    background-color: transparent;
-  }
+  background-color: black; // Really rough colours for now...
+  padding-top: $spacing-5;
 
   &__main {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       align-items: center;
       display: -ms-grid;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      padding: $spacing-5 0;
     }
   }
 
@@ -126,7 +120,7 @@
       width: $size-1;
 
       svg {
-        @include size(.8rem);
+        @include size(0.8rem);
       }
     }
   }

@@ -1,14 +1,15 @@
 .hero {
-  margin: $spacing-8 0;
+  align-items: center;
+  background-color: black; // Really rough colours for now...
+  display: flex;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    margin: $spacing-10 0 $spacing-11;
+    height: 75vh;
   }
 
   &__container {
     @include container;
-
   }
 
   &__content {
@@ -27,7 +28,7 @@
 
   &__heading {
     font-size: $font-size-h1;
-    left: .4rem;
+    left: 0.4rem;
     margin-bottom: $spacing-6;
     text-align: center;
     position: relative;
@@ -53,7 +54,6 @@
     }
 
     &--small {
-
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
         max-width: 48rem;
       }

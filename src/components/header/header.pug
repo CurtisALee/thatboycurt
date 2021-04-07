@@ -3,8 +3,8 @@ mixin header(c)
     .container
       .header__main
         .header__logo
-          a.logo(href='/', aria-label="Leaf logo")
-            +logo
+          a.logo(href='/', aria-label="thatboycurt logo links to homepage")
+            +logo()
         .header__nav
           +nav({
             navList: [
@@ -15,11 +15,6 @@ mixin header(c)
               {
                 url: "/company",
                 text: "Company"
-              },
-              {
-                url: "/case-studies",
-                textMobile: "Work",
-                text: "Case studies"
               },
               {
                 url: "/blog",
