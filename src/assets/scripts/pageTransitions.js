@@ -38,6 +38,10 @@ const PageTransition = Barba.BaseTransition.extend({
   },
 })
 
+window.addEventListener('load', function () {
+  PageTransition.addTransitionInClass()
+})
+
 Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck
 Barba.Pjax.preventCheck = function (evt, element) {
   if (!Barba.Pjax.originalPreventCheck(evt, element)) {
