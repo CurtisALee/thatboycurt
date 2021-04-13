@@ -1,0 +1,29 @@
+.post {
+  @include focus-ring;
+  @include shadow-effect;
+  background-color: $color-white;
+  border-radius: 8px;
+  color: var(--color-paragraph);
+  height: 100%;
+  padding: $spacing-6;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: $spacing-7;
+  }
+
+  &__heading {
+    color: #00071c;
+    font-size: $font-size-h3;
+    margin: 0 0 $spacing-4;
+  }
+
+  &__text {
+    -webkit-box-orient: vertical;
+    color: currentColor;
+    display: -webkit-box;
+    font-size: $font-size-sm;
+    -webkit-line-clamp: 3;
+    margin: 0;
+    overflow: hidden;
+  }
+}

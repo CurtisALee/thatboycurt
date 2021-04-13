@@ -1,11 +1,9 @@
 extends ../base.pug
 
 block pageContent
-  +header({})
+  +header()
 
   main.site-content(role="main")
     block pageComponents
 
-  +footer({
-    nav: true
-  })
+  +footer()

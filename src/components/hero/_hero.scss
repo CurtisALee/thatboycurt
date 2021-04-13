@@ -2,21 +2,18 @@
   align-items: center;
   background-color: #00071c;
   display: flex;
-  padding: $spacing-10 0;
+  padding: $spacing-9 0;
   position: relative;
   text-align: center;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     padding: $spacing-10 0;
     margin-bottom: $spacing-10;
   }
 
   &__container {
     @include container;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      transform: translateY(-10%);
-    }
+    transform: translateY(-10%);
   }
 
   &__heading {
@@ -36,7 +33,7 @@
     color: #e5e5e5; // var(--color-hero-subheading)
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: $spacing-6;
+    margin-bottom: $spacing-7;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
