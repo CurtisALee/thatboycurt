@@ -102,18 +102,12 @@ $duration-5: 400ms;
 $duration-6: 500ms;
 
 // Heading sizes
-$font-size-h1: 2rem !default;
+$font-size-h1: 2.25rem !default;
 $font-size-h2: 1.5rem !default;
 $font-size-h3: 1.1rem !default;
 $font-size-h4: 0.9rem !default;
 $font-size-h5: 0.8rem !default;
 $font-size-h6: 0.75rem !default;
-
-// Focus states
-$focus-bg: var(--color-focus-bg);
-$focus-color: var(--color-focus-color);
-$focus-style: var(--color-focus-style);
-$focus-width: var(--color-focus-width);
 
 // Font sizes
 $root-font-size: 1rem;
@@ -126,9 +120,9 @@ $font-size-lg: 1.875rem !default;
 $font-size-xl: 2.2rem !default;
 
 // Font colours
-$heading-color: var(--color-accent);
-$link-color: var(--color-accent);
-$paragraph-color: var(--color-paragraph);
+$heading-color: $color-powder;
+$link-color: $color-powder;
+$paragraph-color: $color-ice;
 
 // Font weights
 $font-weight-base: 400;
@@ -188,30 +182,4 @@ $z-index: (
 // Z-index function
 @function z($key) {
   @return map-get($z-index, $key);
-}
-
-:root {
-  --color-header: #{$color-indigo};
-  --color-header-nav: #{$color-astronaut};
-  --color-accent: #{$color-powder};
-  --color-background: #{$color-majorelle};
-  --color-blog-heading: #{$color-iris};
-  --color-container: #{$color-indigo};
-  --color-focus-bg: #{$color-sky};
-  --color-focus-color: #{$color-majorelle};
-  --color-focus-style: #{$border-style};
-  --color-focus-width: #{$border-width-sm};
-  --color-footer-contact: #{$color-white};
-  --color-footer-divider: #{$color-violet};
-  --color-footer-text: #{$color-blush};
-  --color-header-background: #{$color-indigo};
-  --color-heading: #{$color-ivory};
-  --color-hero-subheading: #{$color-ice};
-  --color-logo: #{$color-white};
-  --color-nav: #{$color-ice};
-  --color-paragraph: #{$color-ice};
-  --color-paragraph-bold: #{$color-ivory};
-  --color-post-heading: #{$color-ivory};
-  --color-share-icons: #{$color-white};
-  --color-social-icons: #{$color-white};
 }

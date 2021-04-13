@@ -1,4 +1,4 @@
-extends ../../layouts/content.pug
+extends ../../layouts/page.pug
 
 block prepend vars
   -var pageTitle = "My Advice As A Junior Designer | Leaf"
@@ -7,6 +7,7 @@ block prepend vars
   -var metaDescription = "5 tips to help juniors and graduates in the tech and creative industry get ahead, based on my own personal experiences."
 
   -var heroHeading = "My Advice As A Junior Designer"
+  -var heroSubheading = "2019"
 
 block pageComponents
 
@@ -14,9 +15,7 @@ block pageComponents
 
     +hero({
       heading: heroHeading,
-      author: "Curtis Lee",
-      date: "19 June 2019",
-      minutesToRead: 4
+      subheading: heroSubheading,
     })
 
     .section

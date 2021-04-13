@@ -1,7 +1,0 @@
-mixin bullet(c)
-  .bullet
-    if c.heading
-      h3.bullet__heading= c.heading
-    ul.bullet.styled-list(class= c.modifier ? "bullet__list--" + c.modifier : "")
-      each item in c.items
-        li.bullet.styled-list__item!= item.item

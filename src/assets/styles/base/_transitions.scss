@@ -3,15 +3,15 @@
   opacity: 0;
   transform: translateY(0);
   transition: opacity $duration-6 $timing-ease,
-    transform $duration-6 $timing-ease;
+    transform $duration-5 $timing-ease;
 }
 
 .hero {
   &__content {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateX(0);
     transition: opacity $duration-6 $timing-ease,
-      transform $duration-6 $timing-ease;
+      transform $duration-5 $timing-ease;
   }
 }
 
@@ -25,7 +25,7 @@
   .hero {
     &__content {
       opacity: 0;
-      transform: translateY(5%);
+      transform: translateX(-5%);
     }
   }
 }
@@ -34,7 +34,7 @@
   .hero {
     &__content {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
 

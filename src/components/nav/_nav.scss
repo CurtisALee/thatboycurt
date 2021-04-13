@@ -1,15 +1,17 @@
 .nav {
   margin: 0 auto;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin-left: 2rem;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin: 0;
   }
 
   &__list {
-    align-items: center;
-    display: flex;
+    @include flex-center;
     height: 100%;
-    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -28,21 +30,17 @@
   &__link {
     @include animated-link($border-width-base, '.nav__text');
     @include focus-bg;
-    color: var(--color-nav);
+    color: $rift-pearl;
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: $font-size-sm;
     outline: none;
     padding: $spacing-5 $spacing-4;
     position: relative;
+    transition: 0.2s;
 
     @include hover {
+      color: $color-white;
       text-decoration: none;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      font-size: $font-size-xs;
-      margin: $spacing-1;
-      padding: $spacing-4;
     }
 
     &[data-mobile-only] {
@@ -52,7 +50,7 @@
     }
 
     &--active {
-      color: $color-snow;
+      color: $color-white;
       pointer-events: none;
 
       &::before {

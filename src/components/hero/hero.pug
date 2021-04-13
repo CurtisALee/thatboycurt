@@ -2,14 +2,10 @@ mixin hero(c)
   section.hero
     .hero__container
       .hero__content
-        .hero__my-name Curtis Lee
-        if c.introButton === true
+        if c.index === true
             h1.hero__heading !{c.heading}
-            p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
+            p.hero__subheading!= c.subheading
             +button(c.button)
         else
-            h1.hero__heading(class= c.headingModifier ? "hero__heading--" + c.headingModifier : "")  !{c.heading}#[span.hero__heading__period .]
-            if c.subheading
-              p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
-            else
-              p.hero__subheading A #[strong #{c.minutesToRead} minute read], written by #[strong #{c.author}] on #[strong #{c.date}].
+            h1.hero__heading !{c.heading}
+            p.hero__subheading !{c.subheading}

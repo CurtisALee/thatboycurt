@@ -2,14 +2,13 @@ extends ../layouts/page.pug
 
 block prepend vars
   -var metaUrl = "https://thatboycurt.com"
-  -var heroHeading = "Hey there, I’m Curt 👋"
-  -var heroSubheading = "Currently designing products at nuom"
+  -var heroHeading = "Hey, I’m Curt 👋"
 
 block pageComponents
   +hero({
     heading: heroHeading,
-    subheading: heroSubheading,
-    introButton: true,
+    subheading: "Currently designing products at <a class='hero__subheading-link' href='https://nuom.co.uk/'>nuom</a>",
+    index: true,
     button: {
       url: "#",
       text: "More about me"
