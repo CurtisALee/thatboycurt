@@ -4,7 +4,7 @@
   top: 0;
 
   &__heading-2 {
-    color: var(--color-heading-2);
+    color: #00071c;
     font-size: $font-size-h2;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -13,7 +13,7 @@
   }
 
   &__heading-3 {
-    color: var(--color-heading-3);
+    color: #00071c;
     font-size: $font-size-h3;
     margin-bottom: $spacing-3;
 
@@ -23,7 +23,7 @@
   }
 
   &__intro {
-    color: var(--color-intro-text);
+    color: #00071c;
     font-size: $font-size-md;
     line-height: 1.6;
     margin-bottom: $spacing-5;
@@ -33,13 +33,13 @@
     }
 
     &--analysis {
-      color: var(--color-heading);
+      color: #00071c;
       margin-bottom: $spacing-5;
     }
   }
 
   &__text {
-    color: var(--color-text);
+    color: #00071c;
     line-height: 1.7;
     margin-bottom: $spacing-5;
 

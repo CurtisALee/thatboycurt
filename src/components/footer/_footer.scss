@@ -26,12 +26,12 @@
     }
 
     &__period {
-      color: var(--color-accent);
+      color: #00071c;
     }
   }
 
   &__text {
-    color: var(--color-text);
+    color: #00071c;
     margin: 0;
     max-width: 28rem;
     text-align: center;
@@ -90,7 +90,7 @@
   }
 
   &__subheading {
-    color: var(--color-footer-text);
+    color: #00071c;
     font-size: 0.6rem;
     font-weight: 400;
     letter-spacing: 0.05rem;
@@ -101,7 +101,7 @@
   &__link {
     @include animated-link($border-width-sm);
     @include focus-bg;
-    color: var(--color-footer-contact);
+    color: #00071c;
     font-size: 1.3rem;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -123,7 +123,7 @@
 
   &__info {
     @include clearfix;
-    border-top: $border-width-base $border-style var(--color-footer-divider);
+    border-top: $border-width-base $border-style #00071c;
     font-size: $font-size-xs;
     margin-top: $spacing-8;
     padding: $spacing-3 0 $spacing-6;

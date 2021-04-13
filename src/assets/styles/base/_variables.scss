@@ -52,7 +52,7 @@ $rift-baltic: hsl(244, 15%, 18%);
 $rift-red: hsl(0, 96%, 69%);
 
 // Background
-$background-color: var(--color-background);
+$background-color: $color-white;
 
 // Border radius
 $border-radius-xs: 0.1rem !default; // 2px
@@ -182,4 +182,8 @@ $z-index: (
 // Z-index function
 @function z($key) {
   @return map-get($z-index, $key);
+}
+
+:root {
+  --color-logo: #{$color-white};
 }

@@ -24,12 +24,11 @@
   a {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: var(--color-accent);
+    text-decoration-color: $color-powder;
 
     @include hover {
-      color: var(--color-accent);
-      text-decoration-color: var(--color-paragraph);
+      color: $color-powder;
+      text-decoration-color: $color-ash;
     }
   }
 }
-

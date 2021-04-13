@@ -54,7 +54,7 @@
       pointer-events: none;
 
       &::before {
-        background: var(--color-accent);
+        background: $color-powder;
         bottom: 0;
         content: '';
         height: 3px;
