@@ -28,7 +28,7 @@
   }
 
   &__link {
-    @include animated-link($border-width-base, '.nav__text');
+    @include animated-link($border-width-sm, '.nav__text');
     @include focus-bg;
     color: $rift-pearl;
     display: inline-block;

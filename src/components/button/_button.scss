@@ -5,14 +5,11 @@
   border-radius: $border-radius-base;
   color: #00071c;
   cursor: pointer;
+  display: inline-block;
   font-size: $font-size-sm;
   font-weight: 500;
   padding: $spacing-5;
   text-align: center;
   text-decoration: none;
   transition: background-color $duration-2 $timing-ease;
-
-  &:hover {
-    // background-color: inherit;
-  }
 }

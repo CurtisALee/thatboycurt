@@ -1,7 +1,10 @@
 .content-block {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  &--sticky {
+    padding-top: 2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
 
   &__heading-2 {
     color: #00071c;

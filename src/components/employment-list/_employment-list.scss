@@ -1,1 +1,7 @@
-// code here...
+.employment-list {
+  padding-top: 2rem;
+
+  &__items {
+    list-style: none;
+  }
+}

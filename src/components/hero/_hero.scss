@@ -13,7 +13,7 @@
 
   &__container {
     @include container;
-    transform: translateY(-10%);
+    width: 100%;
   }
 
   &__heading {
@@ -33,7 +33,7 @@
     color: #e5e5e5; // var(--color-hero-subheading)
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: $spacing-7;
+    margin-bottom: $spacing-6;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
@@ -50,7 +50,7 @@
       background-color: currentColor;
       bottom: 0;
       content: '';
-      height: 1px;
+      height: 0.1rem;
       left: 0;
       position: absolute;
       width: 100%;

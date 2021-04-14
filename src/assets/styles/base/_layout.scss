@@ -2,6 +2,14 @@ html {
   position: relative;
 }
 
+.page {
+  overflow: hidden;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    overflow: visible;
+  }
+}
+
 .container {
   @include container;
   position: relative;
