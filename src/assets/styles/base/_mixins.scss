@@ -1,3 +1,21 @@
+$linkedin: url('/assets/images/icons/social/linkedin.svg');
+$dribbble: url('/assets/images/icons/social/dribbble.svg');
+
+$socials: (
+  linkedin: $linkedin,
+  dribbble: $dribbble,
+);
+
+@mixin social-button($background-image) {
+  background: $background-image no-repeat left center;
+}
+
+@each $social, $icon in $socials {
+  .button--#{$social} {
+    @include social-button(nth($icon, 1n));
+  }
+}
+
 @mixin animated-link($size, $selector: '&') {
   $selector: unquote($selector);
 
@@ -108,19 +126,6 @@
 @mixin padding-vertical($padding) {
   padding-bottom: $padding;
   padding-top: $padding;
-}
-
-@mixin shadow-effect {
-  box-shadow: 0 0.125rem 0.25rem 0 rgba($color-black, 0.025);
-  display: block;
-  transition: box-shadow $duration-6 $timing-ease,
-    transform $duration-2 $timing-ease;
-
-  @include hover {
-    box-shadow: 0 0.5rem 1rem 0 rgba($color-black, 0.075);
-    text-decoration: none;
-    transform: scale(1.04);
-  }
 }
 
 @mixin size($size) {

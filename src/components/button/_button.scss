@@ -16,8 +16,4 @@
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     font-size: 1rem;
   }
-
-  &--linkedin {
-    background: url('/assets/images/icons/social/linkedin.svg') no-repeat;
-  }
 }
