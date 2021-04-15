@@ -6,10 +6,18 @@
   color: #00071c;
   cursor: pointer;
   display: inline-block;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   font-weight: 500;
   padding: $spacing-5;
   text-align: center;
   text-decoration: none;
   transition: background-color $duration-2 $timing-ease;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    font-size: 1rem;
+  }
+
+  &--linkedin {
+    background: url('/assets/images/icons/social/linkedin.svg') no-repeat;
+  }
 }

@@ -1,24 +1,13 @@
 .content-block {
   &--sticky {
     padding-top: 2rem;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
   }
 
-  &__heading-2 {
+  &__heading {
     color: #00071c;
     font-size: $font-size-h2;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: $font-size-xl;
-    }
-  }
-
-  &__heading-3 {
-    color: #00071c;
-    font-size: $font-size-h3;
-    margin-bottom: $spacing-3;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       font-size: 1.6rem;
@@ -26,32 +15,19 @@
   }
 
   &__intro {
-    color: #00071c;
+    color: #666666;
     font-size: $font-size-md;
     line-height: 1.6;
     margin-bottom: $spacing-5;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      margin-bottom: $spacing-6;
-    }
-
-    &--analysis {
-      color: #00071c;
-      margin-bottom: $spacing-5;
-    }
   }
 
   &__text {
-    color: #00071c;
-    line-height: 1.7;
+    color: #808080;
+    line-height: 1.75;
     margin-bottom: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-6;
-    }
-
-    &--contrast {
-      color: hsl(254, 100%, 95%);
     }
   }
 }

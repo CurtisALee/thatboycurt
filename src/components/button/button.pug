@@ -1,9 +1,4 @@
 mixin button(c)
-  if c.url
-    a.button(
-      class=(c.modifier ? "button--" + c.modifier : "")
-      href= c.url)= c.text
-  else
-    button.button(
-      class=(c.modifier ? "button--" + c.modifier : "")
-      type= c.type ? c.type : "button")= c.text
+  a.button(
+    class=(c.modifier ? "button--" + c.modifier : "")
+    href= c.url)= c.text

@@ -32,11 +32,15 @@
     @include focus-bg;
     color: $rift-pearl;
     display: inline-block;
-    font-size: $font-size-sm;
+    font-size: 1rem;
     outline: none;
     padding: $spacing-5 $spacing-4;
     position: relative;
     transition: 0.2s;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      font-size: $font-size-sm;
+    }
 
     @include hover {
       color: $color-white;

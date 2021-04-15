@@ -33,7 +33,7 @@ Once you've done this, check to make sure `nvm` is installed using `command -v n
 
 ## Installing the node modules
 
-This bits easy -> `cd/into/thatboycurt`, and run `npm install` to create the `node_modules` folder. This will install all of the required dependencies for the project, and once this is done, use `npm start` to launch the local server. All changes will be automatically compiled and refreshed in the browser from here on out.
+This bit's easy -> `cd/into/thatboycurt`, and run `npm install` to create the `node_modules` folder. This will install all of the required dependencies for the project, and once this is done, use `npm start` to launch the local server. All changes will be automatically compiled and refreshed in the browser from here on out.
 
 ---
 
@@ -41,10 +41,14 @@ This bits easy -> `cd/into/thatboycurt`, and run `npm install` to create the `no
 
 This repository is synced to Netlify, and every time new changes are pushed, Netlify automatically runs the build and deploys the site live to [thatboycurt.com][site].
 
-I've set the build command and DNS settings in the `Site Overview` section on Netlify, so unless they're changed, there's nothing more that needs to be done...
+I've configured the build command and DNS settings in the `Site Overview` section on Netlify, so unless they're changed, there's nothing more that needs to be done...
 
 [site]: https://thatboycurt.com/
 
 ---
 
 Again, a big thanks to the Leaf team for supplying the config for this 💙
+
+---
+
+Also check out: https://jakearchibald.github.io/svgomg/
