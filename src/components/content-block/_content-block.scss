@@ -23,8 +23,11 @@
 
   &__text {
     color: #808080;
-    line-height: 1.75;
     margin-bottom: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: $font-size-sm;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-6;

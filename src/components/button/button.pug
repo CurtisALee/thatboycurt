@@ -1,4 +1,5 @@
 mixin button(c)
   a.button(
+    target=(c.newTab ? "_blank" : undefined)
     class=(c.modifier ? "button--" + c.modifier : "")
     href= c.url)= c.text

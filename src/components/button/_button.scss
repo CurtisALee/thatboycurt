@@ -1,3 +1,8 @@
+$linkedin-icon: url('/assets/images/icons/social/linkedin.svg');
+$dribbble-icon: url('/assets/images/icons/social/dribbble.svg');
+$linkedin-url: 'https://www.linkedin.com/in/curtis97lee/';
+$dribbble-url: 'https://dribbble.com/Curtis_A_Lee';
+
 .button {
   @include focus-ring;
   background-color: $color-white;
@@ -14,6 +19,37 @@
   transition: background-color $duration-2 $timing-ease;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    font-size: 1rem;
+    font-size: $root-font-size;
+  }
+
+  &--footer {
+    background-color: #00071c;
+    color: $color-white;
+  }
+}
+
+a[href='#{$linkedin-url}'],
+a[href='#{$dribbble-url}'] {
+  font-size: $font-size-xs;
+  padding-left: $spacing-8;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+    padding-left: 2.5rem;
+  }
+}
+
+$socials: (
+  linkedin: $linkedin-icon,
+  dribbble: $dribbble-icon,
+);
+
+@mixin social-button($background-image) {
+  background: $background-image no-repeat $spacing-4 center #e3e4e8;
+  padding: $spacing-4;
+}
+
+@each $social, $icon in $socials {
+  .button--#{$social} {
+    @include social-button(nth($icon, 1n));
   }
 }
