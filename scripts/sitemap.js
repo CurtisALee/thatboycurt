@@ -30,7 +30,6 @@ function getLastLogicalModifiedDate(relativePath) {
 function generateSitemapConfig() {
   return glob
     .sync(FILES, { cwd: CWD })
-    .filter((relativePath) => !relativePath.includes('404.pug') )
     .map((relativePath) => {
       const lastmod = getLastLogicalModifiedDate(relativePath)
       let path = ''

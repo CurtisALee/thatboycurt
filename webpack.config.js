@@ -34,7 +34,6 @@ const statsConfig = {
   assets: false,
   builtAt: false,
   hash: false,
-  // timings: false,
   entrypoints: false,
   modules: false,
   version: false,
