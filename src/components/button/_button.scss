@@ -16,21 +16,29 @@ $dribbble-url: 'https://dribbble.com/Curtis_A_Lee';
   padding: $spacing-5;
   text-align: center;
   text-decoration: none;
-  transition: background-color $duration-2 $timing-ease;
+  transition: background-color $duration-5 $timing-ease;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     font-size: $root-font-size;
   }
 
+  @include hover {
+    background-color: darken($color-white, 15%);
+  }
+
   &--footer {
     background-color: #00071c;
     color: $color-white;
+
+    @include hover {
+      background-color: lighten(#00071c, 5%);
+    }
   }
 }
 
 a[href='#{$linkedin-url}'],
 a[href='#{$dribbble-url}'] {
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
   padding-left: $spacing-8;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
@@ -46,6 +54,10 @@ $socials: (
 @mixin social-button($background-image) {
   background: $background-image no-repeat $spacing-4 center #e3e4e8;
   padding: $spacing-4;
+
+  @include hover {
+    background-color: darken(#e3e4e8, 5%);
+  }
 }
 
 @each $social, $icon in $socials {

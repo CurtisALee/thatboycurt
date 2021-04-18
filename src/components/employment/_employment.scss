@@ -1,6 +1,5 @@
 .employment {
   display: flex;
-  margin-bottom: 1rem;
 
   &__thumbnail {
     position: relative;
@@ -8,7 +7,7 @@
     &::after {
       background-color: #d5d6dd;
       content: '';
-      height: calc(100% - 3rem);
+      height: calc(100% - #{$spacing-9});
       left: 50%;
       position: absolute;
       width: 0.2rem;
@@ -23,7 +22,30 @@
     }
   }
 
+  &__media {
+    width: 3rem;
+  }
+
+  &__image {
+    border-radius: $border-radius-sm;
+  }
+
+  &__content {
+    margin-left: $spacing-5;
+  }
+
   &__details {
-    margin: 0;
+    color: #666666;
+    font-weight: 500;
+    margin-bottom: $spacing-1;
+  }
+
+  &__details,
+  &__location {
+    font-size: $font-size-sm;
+  }
+
+  &__location {
+    color: #808080;
   }
 }

@@ -44,7 +44,7 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      grid-column-gap: 12rem;
+      grid-column-gap: 6rem;
       grid-template-columns: 2fr 1fr;
     }
   }

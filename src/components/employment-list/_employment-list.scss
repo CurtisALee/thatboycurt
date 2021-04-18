@@ -1,7 +1,14 @@
 .employment-list {
-  padding-top: 2rem;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding-top: 1.5rem;
+  }
 
   &__items {
     list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
   }
 }

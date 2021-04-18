@@ -33,19 +33,20 @@ block pageComponents
               newTab: true,
               modifier: "linkedin",
               url: "https://www.linkedin.com/in/curtis97lee/",
-              text: "I'm on LinkedIn"
+              text: "Let's connect on LinkedIn"
             }
           })
         .grid__item
           +employment-list({
-            employmentList: [
+            employments: [
               {
                 image: {
                   src: "/assets/images/employments/nuom.jpg",
                   alt: "The nuom logo."
                 },
                 title: "UI/UX Designer",
-                details: "nuom | Mar '21 - Present",
+                company: "nuom",
+                date: "Mar 2021 - Present",
                 location: "Nottingham, UK"
               },
               {
@@ -54,7 +55,8 @@ block pageComponents
                   alt: "The Leaf logo."
                 },
                 title: "Product Designer",
-                details: "Leaf Software | Feb '19 - Mar '21",
+                company: "Leaf",
+                date: "Feb 2019 - Mar 2021",
                 location: "Canterbury, UK (Remote)"
               },
               {
@@ -63,7 +65,8 @@ block pageComponents
                   alt: "The SkillShare logo."
                 },
                 title: "Online Teacher",
-                details: "SkillShare | Sep '18 - Jan '19",
+                company: "SkillShare",
+                date: "Sep 2018 - Jan 2019",
                 location: "Nottingham, UK"
               },
               {
@@ -72,7 +75,8 @@ block pageComponents
                   alt: "The Strafe logo."
                 },
                 title: "Junior Designer",
-                details: "Strafe Creative | Nov '17 - Aug '18",
+                company: "Strafe",
+                date: "Nov 2017 - Aug 2018",
                 location: "Nottingham, UK"
               },
               {
@@ -81,7 +85,8 @@ block pageComponents
                   alt: "The Kind logo."
                 },
                 title: "Graphic Design Intern",
-                details: "Kind | Jul '17 - Aug '17",
+                company: "Kind",
+                date: "Jul 2017 - Aug 2017",
                 location: "Nottingham, UK",
                 modifier: "last"
               }
