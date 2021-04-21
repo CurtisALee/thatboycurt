@@ -1,14 +1,26 @@
 .post {
-  @include focus-ring;
   background-color: $color-white;
-  border-radius: 8px;
-  color: var(--color-paragraph);
+  color: #666666;
   display: block;
   height: 100%;
   padding: $spacing-6;
+  position: relative;
+  transition: background-color $duration-5 $timing-ease;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     padding: $spacing-7;
+
+    @include hover {
+      background-color: #fcfcfd;
+    }
+  }
+
+  &__date {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: $spacing-5;
+    text-transform: uppercase;
   }
 
   &__heading {
@@ -18,12 +30,26 @@
   }
 
   &__text {
-    -webkit-box-orient: vertical;
     color: currentColor;
-    display: -webkit-box;
     font-size: $font-size-sm;
-    -webkit-line-clamp: 3;
-    margin: 0;
+    margin-bottom: $spacing-6;
     overflow: hidden;
+  }
+
+  &__label {
+    background-color: #e3e4e8;
+    border-radius: $border-radius-sm;
+    color: #00071c;
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: $spacing-3;
+    text-transform: uppercase;
+  }
+
+  &__media {
+    position: absolute;
+    right: $spacing-5;
+    top: $spacing-5;
   }
 }

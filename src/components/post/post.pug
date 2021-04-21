@@ -1,5 +1,7 @@
 mixin post(c)
-  a.post(href=c.href)
+  a.post(
+    target= "_blank"
+    href=c.href)
       .post__content
         span.post__date Published in #{c.date}
         h3.post__heading= c.heading

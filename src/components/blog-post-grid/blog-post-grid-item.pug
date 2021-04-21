@@ -1,15 +1,17 @@
 mixin blog-post-grid-item(c)
   .grid__item
-    a.post(href=c.href)
-      .post__content
-        span.post__date Published in #{c.date}
-        h3.post__heading= c.heading
-        p.post__text= c.text
-        .post__tag
-          span.post__label= c.label
-      if c.redirect === true
-        +image({
-          context: "post",
-          src: "/assets/images/icons/ui/redirect.svg",
-          alt: "Clicking this link will automatically open up a new tab."
-        })
+    a.post(
+      target= "_blank"
+      href=c.href)
+        .post__content
+          span.post__date Published in #{c.date}
+          h3.post__heading= c.heading
+          p.post__text= c.text
+          .post__tag
+            span.post__label= c.label
+        if c.redirect === true
+          +image({
+            context: "post",
+            src: "/assets/images/icons/ui/redirect.svg",
+            alt: "Clicking this link will automatically open up a new tab."
+          })

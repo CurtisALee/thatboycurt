@@ -3,9 +3,9 @@ mixin hero(c)
     .hero__container
       .hero__content
         if c.index === true
-            h1.hero__heading !{c.heading}
-            p.hero__subheading!= c.subheading
-            +button(c.button)
+          h1.hero__heading !{c.heading}
+          p.hero__subheading!= c.subheading
+          +button(c.button)
         else
-            h1.hero__heading !{c.heading}
-            p.hero__subheading !{c.subheading}
+          h1.hero__heading !{c.heading}
+          p.hero__subheading !{c.subheading}
