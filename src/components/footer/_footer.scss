@@ -1,149 +1,55 @@
 .footer {
-  display: block;
-  padding-top: $spacing-5;
+  color: #00071c; // var(--color-hero-subheading)
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding-top: $spacing-9;
+  &__container {
+    padding: 0 $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      @include container;
+    }
   }
 
   &__cta {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: $spacing-8;
+    margin: 0 auto;
+    max-width: $size-11;
   }
 
   &__heading {
-    font-size: 2rem;
-    left: 0.2rem;
+    font-size: $font-size-xl;
     line-height: $heading-line-height;
-    margin: 0 0 $spacing-4;
-    position: relative;
+    margin: 0 0 $spacing-1;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       line-height: $line-height;
     }
-
-    &__period {
-      color: #00071c;
-    }
   }
 
   &__text {
-    color: #00071c;
-    margin: 0;
-    max-width: 28rem;
+    color: inherit;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: $spacing-6;
     text-align: center;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: 1.1rem;
-    }
-  }
-
-  &__grid {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: $spacing-7;
-    justify-items: center;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      margin: 0 auto;
-      grid-template-columns: 1fr max-content 1fr;
-      grid-template-rows: 1fr 1fr;
-      width: 38rem;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: none;
-      grid-gap: $spacing-8;
-      width: 100%;
-    }
-  }
-
-  &__item {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-
-    &--hello {
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-        grid-area: 1 / 3;
-      }
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        grid-area: auto;
-      }
-    }
-
-    &--icons {
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-        grid-area: 2 / 2;
-      }
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        grid-area: auto;
-      }
-    }
-  }
-
-  &__subheading {
-    color: #00071c;
-    font-size: 0.6rem;
-    font-weight: 400;
-    letter-spacing: 0.05rem;
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-  &__link {
-    @include animated-link($border-width-sm);
-    @include focus-bg;
-    color: #00071c;
-    font-size: 1.3rem;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 1.5rem;
     }
   }
 
-  &__social {
-    margin-top: 0.4rem;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      margin-top: 0.2rem;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: 0.4rem;
-    }
-  }
-
   &__info {
-    @include clearfix;
-    border-top: $border-width-base $border-style #00071c;
+    display: grid;
     font-size: $font-size-xs;
     margin-top: $spacing-8;
     padding: $spacing-3 0 $spacing-6;
 
-    .page--landing & {
-      @include padding-vertical($spacing-3);
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      display: -ms-grid;
-      display: grid;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-template-columns: 1fr auto 1fr;
-      grid-template-rows: none;
       margin-top: $spacing-10;
-      padding-bottom: $spacing-3;
-
-      .page--landing & {
-        grid-template-columns: 1fr 1fr;
-      }
+      padding: 0 0 $spacing-6;
     }
   }
 
@@ -151,39 +57,27 @@
   &__meta {
     align-self: center;
     color: inherit;
-    font-size: 1em;
+    font-size: 1.25em;
     margin-bottom: 0;
-    width: calc(50% - #{$spacing-4});
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      width: auto;
-    }
-
-    .page--landing & {
-      @include padding-vertical($spacing-4);
-    }
+    margin-top: 0.25rem;
   }
 
   &__copyright {
-    float: left;
-    text-align: right;
+    order: 1;
+    justify-self: center;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      justify-self: start;
-      order: -1;
-      text-align: unset;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      justify-self: flex-start;
+      order: unset;
     }
   }
 
-  &__nav {
-    @include margin-horizontal(auto);
-  }
-
   &__meta {
-    float: right;
+    display: none;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      justify-self: end;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      display: unset;
+      justify-self: flex-end;
     }
   }
 }

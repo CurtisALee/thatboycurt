@@ -1,14 +1,15 @@
 mixin footer(c)
   footer.footer(role="contentinfo")
-    .container
+    .footer__container
       .footer__cta
         h2.footer__heading Feel free to reach out
-        p.footer__text I’m always to happy to talk design and offer any advice!
+        p.footer__text I’m always to happy to talk design and offer advice
         +button({
-            modifier: "footer",
-            text: "Drop me an email",
-            url: "#"
-          })
+          modifier: "footer",
+          text: "Drop me an email",
+          url: "mailto:curtisa.lee97@gmail.com"
+        })
       .footer__info
         p.footer__copyright &copy; 2021 Curtis Lee
-        +social({})
+        +social()
+        p.footer__meta Coded by me 👨‍🎨

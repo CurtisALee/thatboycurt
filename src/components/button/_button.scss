@@ -29,6 +29,7 @@ $dribbble-url: 'https://dribbble.com/Curtis_A_Lee';
   &--footer {
     background-color: #00071c;
     color: $color-white;
+    font-size: $font-size-sm;
 
     @include hover {
       background-color: lighten(#00071c, 5%);

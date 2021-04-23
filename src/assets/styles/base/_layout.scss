@@ -47,8 +47,6 @@ html {
   }
 
   &__mobile-btn {
-    display: flex;
-    justify-content: center;
     margin-top: $spacing-7;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {

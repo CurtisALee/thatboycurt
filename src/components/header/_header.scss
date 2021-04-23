@@ -12,7 +12,6 @@
   &__main {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       align-items: center;
-      display: -ms-grid;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       padding-top: $spacing-5;

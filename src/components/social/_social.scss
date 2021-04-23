@@ -1,4 +1,11 @@
 .social {
+  justify-self: center;
+  margin-bottom: $spacing-5;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    justify-self: flex-end;
+    margin-bottom: 0;
+  }
 
   &__list {
     list-style: none;
@@ -8,14 +15,11 @@
 
   &__item {
     display: inline-block;
-    margin: 0 $spacing-7 0 0;
+    margin: 0 $spacing-5 0 0;
+    padding: 0.5rem;
 
     &:last-of-type {
       margin-right: 0;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: $spacing-5;
     }
   }
 
@@ -23,6 +27,8 @@
     @include focus-bg;
     @include touch-boost;
     display: block;
+    margin: 0;
+    padding: 0;
     transition: transform $duration-2 $timing-ease;
 
     @include hover {
@@ -30,18 +36,11 @@
     }
   }
 
-  svg {
-    display: inline-block;
-    height: 1.2rem;
-    vertical-align: middle;
-    width: 1.2rem;
+  a[class~='social__link'] {
+    padding-left: 0;
   }
 
-  &__fill {
-    transition: fill $duration-2 $timing-ease-in-out;
-
-    .social__link:hover & {
-      fill: darken($color-white, 5%);
-    }
+  svg {
+    vertical-align: middle;
   }
 }
