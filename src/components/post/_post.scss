@@ -7,25 +7,25 @@
   position: relative;
   transition: background-color $duration-5 $timing-ease;
 
+  @include hover {
+    background-color: #f9fafa;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     padding: $spacing-7;
-
-    @include hover {
-      background-color: #fcfcfd;
-    }
   }
 
   &__date {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    margin-bottom: $spacing-5;
+    margin-bottom: $spacing-3;
     text-transform: uppercase;
   }
 
   &__heading {
     color: #00071c;
-    font-size: $font-size-h3;
+    font-size: 1.25rem;
     margin: 0 0 $spacing-4;
   }
 

@@ -1,6 +1,14 @@
 .header {
   background-color: #00071c;
 
+  &__container {
+    padding: 0 $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      @include container;
+    }
+  }
+
   &__main {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       align-items: center;

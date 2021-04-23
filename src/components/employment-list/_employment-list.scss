@@ -5,10 +5,13 @@
 
   &__items {
     list-style: none;
+    margin-bottom: 0;
     padding: 0;
   }
 
   &__item {
-    margin-bottom: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 }

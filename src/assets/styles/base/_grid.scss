@@ -36,11 +36,13 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
 
   &--employment-overview {
     grid-row-gap: 3rem;
+    margin-bottom: -$spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-column-gap: 3rem;
       grid-row-gap: 0;
       grid-template-columns: 1.5fr 1fr;
+      margin-bottom: 8rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
@@ -49,15 +51,23 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
     }
   }
 
+  &--collection {
+    grid-gap: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      grid-gap: 2rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      grid-gap: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &--post {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 2.5rem 1fr 2.5rem;
     }
-  }
-
-  &--center {
-    max-width: 34rem;
-    margin: 0 auto;
   }
 
   &--blog {
