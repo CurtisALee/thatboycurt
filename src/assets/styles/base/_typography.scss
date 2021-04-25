@@ -283,13 +283,3 @@ blockquote.blog-blockquote {
     }
   }
 }
-
-.biography {
-  &__meta {
-    color: hsl(231, 84%, 83%);
-    font-size: 0.7rem;
-    letter-spacing: 0.1rem;
-    margin-bottom: $spacing-2;
-    text-transform: uppercase;
-  }
-}

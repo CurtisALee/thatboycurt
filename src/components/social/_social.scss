@@ -15,11 +15,15 @@
 
   &__item {
     display: inline-block;
-    margin: 0 $spacing-5 0 0;
-    padding: 0.5rem;
+    padding: $spacing-5; // Creates larger tap area on mobile
 
-    &:last-of-type {
-      margin-right: 0;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      margin: 0 $spacing-5 0 0;
+      padding: $spacing-3;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 
@@ -29,10 +33,10 @@
     display: block;
     margin: 0;
     padding: 0;
-    transition: transform $duration-2 $timing-ease;
+    transition: transform $duration-3 $timing-ease;
 
     @include hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 

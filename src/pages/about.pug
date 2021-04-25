@@ -1,0 +1,30 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var activePage = "About"
+  -var metaUrl = "https://thatboycurt.com/about"
+  -var heroHeading = "About me"
+  -var heroSubheading = "Crazy, but I do other stuff too"
+
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading,
+  })
+
+  section.section
+    .container
+      +image({
+        context: "about",
+        src: "/assets/images/curt-2021.jpg",
+        alt: "Meeee"
+      })
+      +content-block({
+        intro: "Well, I design. More to come",
+        paragraphs: [
+          {
+            text: "Paragraph goes here..."
+          }
+        ]
+      })

@@ -21,7 +21,7 @@
   &__logo {
     display: flex;
     justify-content: center;
-    padding: $spacing-6 0;
+    padding: 1.75rem 0 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: block;

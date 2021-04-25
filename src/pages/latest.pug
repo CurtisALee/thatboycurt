@@ -1,0 +1,25 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var activePage = "Latest"
+  -var metaUrl = "https://thatboycurt.com/latest"
+  -var heroHeading = "Latest musings"
+  -var heroSubheading = "It's good to keep track"
+
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading,
+  })
+
+  section.section
+    .container
+      +content-block({
+        intro: "Well, I design. More to come",
+        paragraphs: [
+          {
+            text: "Paragraph goes here..."
+          }
+        ]
+      })

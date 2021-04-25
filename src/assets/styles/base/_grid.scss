@@ -1,42 +1,10 @@
-@mixin grid {
-  display: grid;
-  grid-gap: $spacing-7;
-  grid-template-columns: $grid-columns-default;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    grid-column-gap: $spacing-9;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    grid-column-gap: $spacing-10;
-  }
-}
-
-@mixin grid-center {
-  margin: 0 auto;
-  max-width: 34rem;
-}
-
-$grid-columns-default: 1fr;
-$grid-columns-post: 2.5rem 1fr 2.5rem;
-
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: $spacing-7;
-  grid-row-gap: $spacing-7;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    grid-column-gap: $spacing-9;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    grid-column-gap: $spacing-10;
-  }
 
   &--employment-overview {
     grid-row-gap: 3rem;
-    margin-bottom: -$spacing-5;
+    margin-bottom: -$spacing-7;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-column-gap: 3rem;
@@ -64,24 +32,23 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
     }
   }
 
-  &--post {
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-template-columns: 2.5rem 1fr 2.5rem;
-    }
-  }
-
   &--blog {
     background-color: #d5d6dd;
     border: 1px solid #d5d6dd;
     border-radius: 12px;
     grid-gap: 1px;
-    grid-template-columns: 1fr;
-    margin-top: $spacing-6;
+    margin-top: $spacing-5;
     overflow: hidden;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       margin-top: $spacing-7;
+    }
+  }
+
+  &--post {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-template-columns: 2.5rem 1fr 2.5rem;
     }
   }
 }
