@@ -20,11 +20,12 @@
   &__heading {
     font-size: $font-size-xl;
     line-height: $heading-line-height;
-    margin: 0 0 $spacing-1;
+    margin: 0 0 $spacing-3;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       line-height: $line-height;
+      margin: 0 0 $spacing-1;
     }
   }
 

@@ -4,7 +4,7 @@ block prepend vars
   -var activePage = "About"
   -var metaUrl = "https://thatboycurt.com/about"
   -var heroHeading = "About me"
-  -var heroSubheading = "Crazy, but I do other stuff too"
+  -var heroSubheading = "A brief overview of my journey"
 
 
 block pageComponents
@@ -14,17 +14,68 @@ block pageComponents
   })
 
   section.section
-    .container
-      +image({
-        context: "about",
-        src: "/assets/images/curt-2021.jpg",
-        alt: "Meeee"
-      })
+    .container.container--about
       +content-block({
-        intro: "Well, I design. More to come",
+        heading: "Who am I?",
+        intro: "I’m Curt, a Product Designer at Nottingham-based agency, nuom. When I’m not in front of a laptop, I’m probably out on the trails with my bike or chilling in the <strike>beer</strike> garden with an ale.",
         paragraphs: [
           {
-            text: "Paragraph goes here..."
+            text: "I've been dabbling in digital design for the best part of eight years, but I only really got into UI/UX and front-end development within the last four years or so. In that time, I've worked on some really cool projects, met a bunch of amazing people, and interned at a couple of agencies before landing my first full-time role."
           }
         ]
       })
+
+      .about-image
+        +image({
+          context: "about",
+          src: "/assets/images/curt-2021.jpg",
+          alt: "A photo of me wearing a beanie, stood in some woodlands while I look longingly into the distance. Photo was taken by the man himself, Hassan Ishfaq."
+        })
+        figcaption Photo taken by
+          a.figcaption-link(href="https://www.instagram.com/185photography/?hl=en", target= "_blank") Hassan Ishfaq
+
+      +content-block({
+        heading: "How did I start?",
+        intro: "After studying multimedia design at college, I felt that pushing around logo ideas wasn’t for me. I was more interested in product design, and the whole idea of building things people would actually use.",
+        paragraphs: [
+          {
+            text: "With dreams of Portland and designing the next Air Max, I moved to Leicester and enrolled on a Product Design course at De Montfort."
+          },
+          {
+            text: "Things started off well, but it wasn’t until the Tuesday morning hangovers and missed deadlines that I realised I hated what I was doing. After a few angry emails from the course leader, I eventually dropped out."
+          }
+        ]
+      })
+
+      +content-block({
+        heading: "How did things turn around?",
+        intro: "I realised that the best option was to try and enroll at my old college again, but I still had no idea what area of design I wanted to specialise in.",
+        paragraphs: [
+          {
+            text: "Knowing I wouldn’t figure things out laying in bed all day, I reached out to my old college tutor and asked if I could apply for his degree course in Multimedia. It was short notice, but thank f*ck he said yes…"
+          },
+          {
+            text: "I was eventually accepted, and it was here that I was reacquainted with my old dev tutor, Dwayne. His passion for learning and tough love approach to teaching is one of the main reasons I’m where I am today."
+          },
+          {
+            text: "Dwayne was also the one to introduce me to the Head of UX at a local design agency, JH. That designer was Chris Bailey, and seeing his process and how his designs came to life; well — that was it really."
+          }
+        ]
+      })
+      
+      +content-block({
+        heading: "What happened next?",
+        intro: "I won’t ramble on any longer, but as cliché as it might sound, I haven’t really looked back since being introduced to Chris.",
+        paragraphs: [
+          {
+            text: "Chris was my first mentor, and he taught me as much as he could about design and the web in such a short time. He even helped me land my first internship, and from that point on, 2017+ has been a pretty exciting blur."
+          },
+          {
+            text: "Fast forward to now, and I’m working with tools and technologies I never imagined I would. I’ve helped ship a variety of digital products, and have worked alongside some truly talented people that make me a better, more determined person everyday."
+          },
+          {
+            text: "I feel very fortunate to have landed on my feet, and absolutely love what I do. With that, I always try to give back to other designers whenever I can. If it wasn’t for people taking a chance on me, I genuinely have no clue what I’d be doing now."
+          }
+        ]
+      })
+      

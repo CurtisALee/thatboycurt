@@ -1,7 +1,7 @@
 mixin content-block(c)
   .content-block(class= c.modifier ? "content-block--" + c.modifier : "")
     h2.content-block__heading= c.heading
-    p.content-block__intro= c.intro
+    p.content-block__intro!= c.intro
     each item in c.paragraphs
       p.content-block__text= item.text
     if c.blockButton === true

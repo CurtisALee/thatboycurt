@@ -13,6 +13,16 @@ html {
 .container {
   @include container;
   position: relative;
+
+  &--about {
+    margin: 0 auto;
+    max-width: $size-11;
+    padding: 0 $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      max-width: 40rem;
+    }
+  }
 }
 
 .section {
@@ -57,4 +67,8 @@ html {
   &__image {
     border-radius: $border-radius-lg;
   }
+}
+
+.about-image {
+  margin: $spacing-9 0;
 }

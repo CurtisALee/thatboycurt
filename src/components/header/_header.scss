@@ -26,8 +26,12 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: block;
       margin-left: -$spacing-4; // Visual alignment vertically (leading)
-      max-width: 7rem;
+      max-width: 8.3rem;
       padding: $spacing-4;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      max-width: 7rem;
     }
   }
 

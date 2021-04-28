@@ -107,10 +107,16 @@ ul {
 }
 
 figcaption {
-  color: $color-ice;
-  font-size: $font-size-xs;
+  color: #666666;
+  font-size: $font-size-sm;
   margin-top: $spacing-3;
   text-align: center;
+
+  .figcaption-link {
+    color: inherit;
+    margin-left: $spacing-2;
+    text-decoration: underline;
+  }
 }
 
 img {
