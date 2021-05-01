@@ -1,25 +1,17 @@
-$timeline-item-offset: 1.9rem;
+$timeline-item-offset: $spacing-7;
 
 .timeline {
-  margin: 0 auto;
+  margin: $spacing-8 auto;
   position: relative;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    max-width: 60rem;
-  }
 
   &__item {
     display: flex;
-    margin-bottom: 0;
+    margin: $spacing-5 0;
     padding-left: calc(1.6rem + #{$spacing-6});
     position: relative;
 
-    &--hidden {
-      display: none;
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      //margin-bottom: -$timeline-item-offset;
+      margin: 0;
       padding: 0;
 
       &:nth-child(even) {
@@ -28,16 +20,16 @@ $timeline-item-offset: 1.9rem;
     }
 
     &::before {
-      background-color: red;
-      border: solid 0.4rem red;
+      background-color: $color-powder;
+      border: solid 0.1rem #d5d6dd;
       border-radius: 100%;
-      box-shadow: 0 0 0 0.1rem white;
+      box-shadow: inset 0px 0px 0px 0.3rem $color-white;
       content: '';
-      height: 1.5rem;
+      height: $size-2;
       left: 0;
-      margin-top: $timeline-item-offset;
+      margin-top: $spacing-5;
       position: absolute;
-      width: 1.5rem;
+      width: $size-2;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         left: 50%;
@@ -45,9 +37,8 @@ $timeline-item-offset: 1.9rem;
       }
     }
 
-    //- This selector can be simplified to just `::after` when we reintroduce the button.
     &:not(:last-child)::after {
-      background: hsl(226, 64%, 94%);
+      background: #d5d6dd;
       content: '';
       height: 100%;
       left: 0.7rem;
@@ -67,26 +58,6 @@ $timeline-item-offset: 1.9rem;
   &__content {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       max-width: 27rem;
-    }
-  }
-
-  &__button {
-    background-color: red;
-    border: $border-width-sm $border-style hsl(226, 64%, 94%);
-    color: hsl(249, 48%, 92%);
-    cursor: pointer;
-    display: block;
-    font-size: $font-size-xs;
-    padding: $spacing-5;
-    width: 100%;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      padding: $spacing-4 $spacing-5;
-      width: auto;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin: $timeline-item-offset auto 0;
     }
   }
 }

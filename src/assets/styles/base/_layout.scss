@@ -23,6 +23,16 @@ html {
       max-width: 40rem;
     }
   }
+
+  &--timeline {
+    margin: 0 auto;
+    max-width: $size-11;
+    padding: 0 $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: $size-12;
+    }
+  }
 }
 
 .section {
@@ -70,5 +80,9 @@ html {
 }
 
 .about-image {
-  margin: $spacing-9 0;
+  margin: $spacing-8 0;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin: $spacing-9 0;
+  }
 }

@@ -3,7 +3,7 @@ mixin event(c)
   - var month = parseInt(c.date.slice(5), 10)
   - var year = c.date.slice(0, 4)
 
-  .event(class= c.modifier ? "event--" + c.modifier : "")
+  .event
     time.event__date(datetime= c.date)= months[month + -1] + " " + year
-    h3.event__heading= c.heading
+    h2.event__heading= c.heading
     p.event__text= c.text

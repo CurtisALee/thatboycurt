@@ -1,47 +1,36 @@
 .event {
+  background-color: #f9fafa;
+  border-radius: 12px;
+  padding: $spacing-6;
+
   &:not(:first-child) {
     margin-top: $spacing-8;
   }
 
-  &__heading {
-    font-size: 1.6rem;
+  &__date {
+    color: #666666;
+    display: block;
+    font-size: $font-size-xxs;
+    font-weight: 600;
     margin-bottom: $spacing-3;
+    text-transform: uppercase;
   }
 
-  &__date {
-    color: red;
-    display: block;
-    font-size: 0.7rem;
-    font-weight: 400;
-    letter-spacing: 0.05rem;
-    margin-bottom: $spacing-4;
-    text-transform: uppercase;
+  &__heading {
+    color: #00071c;
+    font-size: $font-size-h2;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      font-size: 0.6rem;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 1.6rem;
     }
   }
 
   &__text {
-    line-height: 1.5;
-    margin-bottom: $spacing-7;
+    color: #808080;
+    margin-bottom: 0;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-6;
-    }
-
-    &--margin-bottom {
-      margin-bottom: $spacing-5;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        margin-bottom: $spacing-8;
-      }
-    }
-  }
-
-  &--mirrored {
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      text-align: right;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      font-size: $font-size-sm;
     }
   }
 }

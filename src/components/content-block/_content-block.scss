@@ -37,7 +37,7 @@
     color: #808080;
     margin-bottom: $spacing-5;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
       font-size: $font-size-sm;
     }
 

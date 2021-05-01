@@ -6,7 +6,6 @@ block prepend vars
   -var heroHeading = "Latest happenings"
   -var heroSubheading = "It's good to keep track"
 
-
 block pageComponents
   +hero({
     heading: heroHeading,
@@ -14,12 +13,18 @@ block pageComponents
   })
 
   section.section
-    .container
-      +content-block({
-        intro: "Well, I design. More to come",
-        paragraphs: [
+    .container.container--timeline
+      +timeline({
+        items: [
           {
-            text: "Paragraph goes here..."
+            date: "2021-03",
+            heading: "Joined nuom",
+            text: "With the closing of Leaf, I've since joined the team at nuom as a UI/UX Designer."
+          },
+          {
+            date: "2021-01",
+            heading: "Built a bike",
+            text: "I wanted to see how far I could stretch a budget hardtail. Ended up swapping out every part except for the frame, and it now rides like a dream."
           }
         ]
       })
