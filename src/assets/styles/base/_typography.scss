@@ -80,6 +80,11 @@ p {
 }
 
 a {
+  color: $color-powder;
+  text-decoration: none;
+}
+
+.about-link {
   color: $color-base;
   text-decoration: underline;
 }
