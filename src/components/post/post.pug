@@ -1,6 +1,7 @@
 mixin post(c)
   a.post(
     target= "_blank"
+    rel="noopener"
     href=c.href)
       .post__content
         span.post__date Published in #{c.date}

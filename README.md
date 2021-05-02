@@ -48,7 +48,3 @@ I've configured the build command and DNS settings in the `Site Overview` sectio
 ---
 
 Again, a big thanks to the Leaf team for supplying the config for this 💙
-
----
-
-Also check out: https://jakearchibald.github.io/svgomg/

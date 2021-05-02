@@ -80,9 +80,9 @@ html {
 }
 
 .about-image {
-  margin: $spacing-8 0;
+  margin: $spacing-8 0 $spacing-5;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    margin: $spacing-9 0 $spacing-8;
+    margin: $spacing-9 0 $spacing-6;
   }
 }
