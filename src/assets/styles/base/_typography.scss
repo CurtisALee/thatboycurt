@@ -10,8 +10,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: #00071c;
-  font-weight: $font-weight-heading;
+  color: $color-base;
+  font-weight: $font-weight-bold;
   line-height: $heading-line-height;
   margin-top: 0;
 }
@@ -107,7 +107,7 @@ ul {
 }
 
 figcaption {
-  color: #666666;
+  color: $color-grey-5;
   font-size: $font-size-sm;
   margin-top: $spacing-3;
   text-align: center;
@@ -173,7 +173,7 @@ img {
       width: 0.3rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        top: 0.5rem;
+        top: $spacing-3;
       }
 
       .blog-post & {
@@ -195,18 +195,18 @@ img {
   position: relative;
 
   &__heading {
-    color: #00071c;
+    color: $color-base;
     font-size: 3rem; // Custom font-size, unrelated to global spacing system
-    font-weight: 700;
+    font-weight: $font-weight-bold;
     line-height: 1;
-    margin-bottom: -1rem; // Custom margin, unrelated to global spacing system
+    margin-bottom: -$spacing-5; // Custom margin, unrelated to global spacing system
     pointer-events: none;
     text-align: center;
     z-index: z('below');
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 5rem; // Custom font-size, unrelated to global spacing system
-      margin-bottom: -2rem; // Custom margin, unrelated to global spacing system
+      margin-bottom: -$spacing-7; // Custom margin, unrelated to global spacing system
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -233,11 +233,11 @@ blockquote.blog-blockquote {
   }
 
   p.main-blockquote {
-    color: $color-eggplant;
+    color: $color-base;
   }
 
   p {
-    color: $color-amethyst;
+    color: $color-grey-4;
     display: block;
     font-size: $font-size-lg;
     font-style: italic;
@@ -246,10 +246,10 @@ blockquote.blog-blockquote {
     width: 100%;
 
     &::before {
-      color: rgba($color-amethyst, 0.1);
+      color: rgba($color-grey-4, 0.1);
       content: open-quote;
       font-size: 10rem;
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       line-height: 0.9;
       left: -$spacing-4;
       position: absolute;
@@ -264,7 +264,7 @@ blockquote.blog-blockquote {
   }
 
   cite {
-    color: $color-amethyst;
+    color: $color-grey-4;
     font-size: $font-size-xs;
 
     &::before {

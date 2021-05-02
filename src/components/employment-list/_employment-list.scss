@@ -1,6 +1,6 @@
 .employment-list {
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding-top: 1.5rem;
+    padding-top: $spacing-6;
   }
 
   &__items {
@@ -11,7 +11,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: $spacing-5;
     }
   }
 }

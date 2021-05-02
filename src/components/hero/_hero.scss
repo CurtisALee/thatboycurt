@@ -1,6 +1,6 @@
 .hero {
   align-items: center;
-  background-color: #00071c;
+  background-color: $color-base;
   display: flex;
   padding: $spacing-9 0;
   position: relative;
@@ -30,9 +30,9 @@
   }
 
   &__subheading {
-    color: #e5e5e5; // var(--color-hero-subheading)
-    font-size: 1.5rem;
-    font-weight: 300;
+    color: $color-grey-2;
+    font-size: $spacing-6;
+    font-weight: $font-weight-light;
     margin-bottom: $spacing-6;
     text-align: center;
 
@@ -43,7 +43,7 @@
 
   &__subheading-link {
     color: $color-white;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     position: relative;
 
     &::after {

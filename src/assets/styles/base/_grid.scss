@@ -3,18 +3,18 @@
   grid-template-columns: 1fr;
 
   &--employment-overview {
-    grid-row-gap: 3rem;
+    grid-row-gap: $spacing-8;
     margin-bottom: -$spacing-7;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-column-gap: 3rem;
+      grid-column-gap: $spacing-8;
       grid-row-gap: 0;
       grid-template-columns: 1.5fr 1fr;
-      margin-bottom: 8rem;
+      margin-bottom: $spacing-11;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      grid-column-gap: 6rem;
+      grid-column-gap: $spacing-10;
       grid-template-columns: 2fr 1fr;
     }
   }
@@ -23,18 +23,18 @@
     grid-gap: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      grid-gap: 2rem;
+      grid-gap: $spacing-7;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-gap: 3rem;
+      grid-gap: $spacing-8;
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &--blog {
-    background-color: #d5d6dd;
-    border: 1px solid #d5d6dd;
+    background-color: $color-grey-3;
+    border: $border-width-base $border-style $color-grey-3;
     border-radius: 12px;
     grid-gap: 1px;
     margin-top: $spacing-5;
@@ -48,7 +48,7 @@
 
   &--post {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-template-columns: 2.5rem 1fr 2.5rem;
+      grid-template-columns: $size-4 1fr $size-4;
     }
   }
 }

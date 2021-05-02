@@ -5,7 +5,7 @@
     position: relative;
 
     &::after {
-      background-color: #d5d6dd;
+      background-color: $color-grey-3;
       content: '';
       height: calc(100% - #{$spacing-9});
       left: 50%;
@@ -23,7 +23,7 @@
   }
 
   &__media {
-    width: 3rem;
+    width: $size-5;
   }
 
   &__image {
@@ -35,8 +35,8 @@
   }
 
   &__details {
-    color: #666666;
-    font-weight: 500;
+    color: $color-grey-5;
+    font-weight: $font-weight-medium;
     margin-bottom: $spacing-1;
   }
 
@@ -46,6 +46,6 @@
   }
 
   &__location {
-    color: #808080;
+    color: $color-grey-4;
   }
 }

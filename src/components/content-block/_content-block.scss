@@ -1,12 +1,12 @@
 .content-block {
-  padding-top: 2rem;
+  padding-top: $spacing-7;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     padding-top: 0;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding-top: 2rem;
+    padding-top: $spacing-7;
   }
 
   &--sticky {
@@ -18,7 +18,7 @@
   }
 
   &__heading {
-    color: #00071c;
+    color: $color-base;
     font-size: $font-size-h2;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -27,14 +27,14 @@
   }
 
   &__intro {
-    color: #666666;
+    color: $color-grey-5;
     font-size: $font-size-md;
     line-height: 1.6;
     margin-bottom: $spacing-5;
   }
 
   &__text {
-    color: #808080;
+    color: $color-grey-4;
     margin-bottom: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {

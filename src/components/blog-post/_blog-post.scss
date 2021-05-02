@@ -1,6 +1,6 @@
 .blog-post {
   margin: 0 auto;
-  max-width: 34rem;
+  max-width: $size-11;
 
   &__intro {
     font-size: 1.6rem;
@@ -28,7 +28,7 @@
 
     @include hover {
       color: $color-powder;
-      text-decoration-color: $color-ash;
+      text-decoration-color: darken($color-powder, 5%);
     }
   }
 }

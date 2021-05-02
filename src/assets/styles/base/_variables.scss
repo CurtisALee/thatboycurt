@@ -1,55 +1,18 @@
-// Leaf colors
-$color-violet: hsl(240, 37%, 29%);
-$color-eggplant: hsl(253, 86%, 29%);
-$color-iris: hsl(253, 79%, 37%);
-$color-majorelle: hsl(253, 78%, 43%);
-$color-indigo: hsl(253, 72%, 47%);
-$color-violet: hsl(253, 75%, 52%);
-$color-bluegem: hsl(254, 79%, 37%);
-$color-cerulean: hsl(240, 69%, 58%);
-$color-astronaut: hsl(240, 53%, 31%);
-$color-sapphire: hsl(240, 44%, 49%);
-$color-mauve: hsl(240, 20%, 40%);
-$color-amethyst: hsl(238, 28%, 51%);
-$color-lavender: hsl(236, 100%, 77%);
+// Colors
+$color-base: hsl(225, 100%, 5%);
+$color-grey-5: hsl(0, 0%, 40%);
+$color-grey-4: hsl(0, 0%, 50%);
+$color-grey-3: hsl(233, 11%, 85%);
+$color-grey-2: hsl(0, 0%, 90%);
+$color-grey-1: hsl(180, 9%, 98%);
+
+$color-secondary-2: hsl(232, 19%, 15%);
+$color-secondary-1: hsl(228, 10%, 90%);
+
+// Accents
 $color-powder: hsl(225, 100%, 75%);
-$color-blush: hsl(225, 100%, 80%);
-$color-ice: hsl(225, 100%, 87%);
-
-$color-sky: hsl(205, 100%, 55%);
-$color-coral: hsl(7, 90%, 69%);
-
-$color-black: hsl(0, 0%, 0%);
-$color-coal: hsl(240, 19%, 30%);
-$color-slate: hsl(200, 16%, 20%);
-$color-stone: hsl(230, 3%, 45%);
-$color-dust: hsl(240, 30%, 90%);
-$color-ash: hsl(240, 30%, 94%);
-$color-silk: hsl(240, 40%, 98%);
-$color-snow: hsl(250, 64%, 94%);
-$color-cotton: hsl(225, 30%, 85%);
-$color-ivory: hsl(225, 29%, 97%);
-$color-smoke: hsl(0, 0%, 96%);
 $color-white: hsl(0, 0%, 100%);
-
-// Brand colors
-$hx-melrose: hsl(254, 100%, 88%);
-$hx-royal: hsl(262, 46%, 45%);
-$hx-studio: hsl(262, 47%, 49%);
-$hx-minsk: hsl(262, 48%, 43%);
-$hx-gigas: hsl(262, 49%, 38%);
-$hx-daisy: hsl(263, 53%, 38%);
-$hx-gold: hsl(46, 93%, 65%);
-
-$rift-whisper: hsl(225, 29%, 97%);
-$rift-iron: hsl(240, 4%, 89%);
 $rift-pearl: hsl(240, 8%, 71%);
-$rift-trout: hsl(240, 14%, 27%);
-$rift-mako: hsl(240, 15%, 30%);
-$rift-gun: hsl(240, 15%, 25%);
-$rift-charada: hsl(240, 16%, 20%);
-$rift-baltic: hsl(244, 15%, 18%);
-$rift-red: hsl(0, 96%, 69%);
 
 // Background
 $background-color: $color-white;
@@ -122,11 +85,13 @@ $font-size-xl: 2.2rem !default;
 // Font colours
 $heading-color: $color-powder;
 $link-color: $color-powder;
-$paragraph-color: $color-ice;
+$paragraph-color: $color-grey-4;
 
 // Font weights
-$font-weight-base: 400;
-$font-weight-heading: 700;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
 
 // Line heights
 $heading-line-height: 1.2 !default;

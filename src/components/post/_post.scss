@@ -1,6 +1,6 @@
 .post {
   background-color: $color-white;
-  color: #666666;
+  color: $color-grey-5;
   display: block;
   height: 100%;
   padding: $spacing-6;
@@ -8,7 +8,7 @@
   transition: background-color $duration-5 $timing-ease;
 
   @include hover {
-    background-color: #f9fafa;
+    background-color: $color-grey-1;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -24,7 +24,7 @@
   }
 
   &__heading {
-    color: #00071c;
+    color: $color-base;
     font-size: 1.25rem;
     margin: 0 0 $spacing-4;
   }
@@ -33,13 +33,12 @@
     color: currentColor;
     font-size: $font-size-sm;
     margin-bottom: $spacing-6;
-    overflow: hidden;
   }
 
   &__label {
-    background-color: #e3e4e8;
+    background-color: $color-secondary-1;
     border-radius: $border-radius-sm;
-    color: #00071c;
+    color: $color-base;
     display: inline-block;
     font-size: $font-size-xxs;
     font-weight: 600;
