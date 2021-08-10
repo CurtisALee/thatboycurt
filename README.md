@@ -43,6 +43,8 @@ This repository is synced to Netlify, and every time new changes are pushed, Net
 
 I've configured the build command and DNS settings in the `Site Overview` section on Netlify, so unless they're changed, there's nothing more that needs to be done...
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c446f429-fc98-46c8-971c-733af48b9611/deploy-status)](https://app.netlify.com/sites/thatboycurt/deploys)
+
 [site]: https://thatboycurt.com/
 
 ---
