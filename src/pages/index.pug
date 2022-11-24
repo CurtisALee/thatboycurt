@@ -139,6 +139,46 @@ block pageComponents
 
   section.section
     .container
+      +project-card({
+        href: "https://nuom-project-template.webflow.io/style-system/base-styles",
+        image: {
+          src: "/assets/images/projects/wf-starter-kit.jpg",
+          alt: "The nuom logo."
+        },
+        heading: "Webflow Template | nuom",
+        text: "This is some text",
+        projects: [
+          {
+            label: "Webflow"
+          },
+          {
+            label: "UI Kit"
+          },
+          {
+            label: "Template"
+          }
+        ]
+      })
+      +project-card({
+        href: "https://nuom-project-template.webflow.io/style-system/base-styles",
+        image: {
+          src: "/assets/images/projects/sketch-formkit.jpg",
+          alt: "The nuom logo."
+        },
+        heading: "FormKit | Sketch Library",
+        text: "This is some text",
+        projects: [
+          {
+            label: "Sketch"
+          },
+          {
+            label: "Data Capture"
+          }
+        ]
+      })
+
+  section.section
+    .container
       h2 I sometimes write...
       .blog-content
         +blog-post-grid

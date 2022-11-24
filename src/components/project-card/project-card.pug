@@ -1,0 +1,16 @@
+mixin project-card(c)
+  a.project-card(
+    target= "_blank"
+    rel="noopener"
+    href=c.href)
+      +image({
+        context: "project",
+        src: c.image.src,
+        alt: c.image.alt
+      })
+      .project-card__content
+        h3.project-card__heading= c.heading
+        p.project-card__text= c.text
+        ul.project-card__labels
+          each item in c.projects
+            li.project-card__label= item.label
