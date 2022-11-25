@@ -139,43 +139,47 @@ block pageComponents
 
   section.section
     .container
-      +project-card({
-        href: "https://nuom-project-template.webflow.io/style-system/base-styles",
-        image: {
-          src: "/assets/images/projects/wf-starter-kit.jpg",
-          alt: "The nuom logo."
-        },
-        heading: "Webflow Template | nuom",
-        text: "This is some text",
-        projects: [
-          {
-            label: "Webflow"
-          },
-          {
-            label: "UI Kit"
-          },
-          {
-            label: "Template"
-          }
-        ]
-      })
-      +project-card({
-        href: "https://nuom-project-template.webflow.io/style-system/base-styles",
-        image: {
-          src: "/assets/images/projects/sketch-formkit.jpg",
-          alt: "The nuom logo."
-        },
-        heading: "FormKit | Sketch Library",
-        text: "This is some text",
-        projects: [
-          {
-            label: "Sketch"
-          },
-          {
-            label: "Data Capture"
-          }
-        ]
-      })
+      h2.collection__heading Stuff I've built
+      .grid.grid--projects
+        .grid__item
+          +project-card({
+            href: "https://nuom-project-template.webflow.io/style-system/base-styles",
+            image: {
+              src: "/assets/images/projects/wf-starter-kit.jpg",
+              alt: "To improve the quality of our Webflow projects at nuom, I've built a custom style system and component library along with all of the documentation for our team to refer to. This means we're able to build our sites much faster and to a consistently higher standard every time."
+            },
+            heading: "Webflow Starter | nuom",
+            text: "A custom built Webflow template for nuom",
+            projects: [
+              {
+                label: "Webflow"
+              },
+              {
+                label: "Template"
+              }
+            ]
+          })
+        .grid__item
+          +project-card({
+            href: "https://www.behance.net/gallery/108829781/FormKit",
+            image: {
+              src: "/assets/images/projects/sketch-formkit.jpg",
+              alt: "A mini data capture library built using Sketch. It features an array of components for you to start using, including a bunch of default text and layer styles (although they can be configured however you'd like)."
+            },
+            heading: "FormKit | Sketch Library",
+            text: "A mini data capture library built using Sketch",
+            projects: [
+              {
+                label: "Sketch"
+              },
+              {
+                label: "UI Kit"
+              },
+              {
+                label: "Library"
+              }
+            ]
+          })
 
   section.section
     .container

@@ -1,14 +1,19 @@
 .project-card {
   background-color: $color-white;
   color: $color-grey-5;
-  display: block;
   height: 100%;
-  padding: $spacing-6;
-  position: relative;
-  transition: background-color $duration-5 $timing-ease;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: $spacing-7;
+  &__media {
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+  }
+
+  &__image {
+    transition: transform $duration-5 $timing-ease;
+  }
+
+  &__content {
+    padding: $spacing-6 0 0;
   }
 
   &__heading {
@@ -19,22 +24,29 @@
 
   &__text {
     color: currentColor;
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     margin-bottom: $spacing-6;
   }
 
+  &__labels {
+    display: flex;
+    gap: $spacing-3;
+    padding: 0;
+    position: relative;
+  }
+
   &__label {
-    background-color: $color-secondary-1;
+    background-color: rgba($color-powder, .15);
     border-radius: $border-radius-sm;
-    color: $color-base;
+    color: hsl(225, 100%, 50%);
     display: inline-block;
     font-size: $font-size-xxs;
     font-weight: 600;
-    padding: $spacing-3 $spacing-4;
+    padding: $spacing-2 $spacing-3;
     text-transform: uppercase;
   }
+}
 
-  &__media {
-
-  }
+.project-card:hover .project-card__image {
+  transform: scale(1.025);
 }

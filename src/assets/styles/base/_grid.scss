@@ -51,4 +51,14 @@
       grid-template-columns: $size-4 1fr $size-4;
     }
   }
+
+  &--projects {
+    grid-gap: $spacing-5;
+    margin-top: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: $spacing-7;
+    }
+  }
 }
