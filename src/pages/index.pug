@@ -193,6 +193,31 @@ block pageComponents
               }
             ]
           })
+        .grid__item.grid__item--fw
+          +project-card({
+            href: "https://github.com/CurtisALee/pug-tw-express",
+            image: {
+              src: "/assets/images/projects/tw-pug-express.jpg", 
+              alt: "A lightweight starter project that uses PUG for the templating, TailwindCSS for the styling, and ExpressJS as the framework.",
+              modifier: "fw"
+            },
+            heading: "PUG, Tailwind and Express | GitHub",
+            text: "Get started with PUG and Tailwind using this template",
+            projects: [
+              {
+                label: "PUG"
+              },
+              {
+                label: "Tailwind"
+              },
+              {
+                label: "Express"
+              },
+              {
+                label: "Template"
+              }
+            ]
+          })
 
   section.section
     .container

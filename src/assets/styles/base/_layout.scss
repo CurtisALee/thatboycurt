@@ -86,3 +86,9 @@ html {
     margin: $spacing-9 0 $spacing-6;
   }
 }
+
+.grid__item {
+  &--fw {
+    grid-column: 1 / -1;
+  }
+}

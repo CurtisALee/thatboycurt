@@ -6,10 +6,26 @@
   &__media {
     border-radius: $border-radius-lg;
     overflow: hidden;
+
+    &--fw {
+      border: 0.1rem solid $color-grey-1;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        max-height: 19rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   &__image {
     transition: transform $duration-5 $timing-ease;
+
+    &--fw {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        max-height: 19rem;
+      }
+    }
   }
 
   &__content {

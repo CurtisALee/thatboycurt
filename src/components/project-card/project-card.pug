@@ -6,7 +6,8 @@ mixin project-card(c)
       +image({
         context: "project-card",
         src: c.image.src,
-        alt: c.image.alt
+        alt: c.image.alt,
+        modifier: c.image.modifier
       })
       .project-card__content
         h3.project-card__heading= c.heading
